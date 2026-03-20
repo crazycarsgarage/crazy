@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Cars Garage - Pagina Base - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
+    <title>Crazy Cars Garage - Quienes Somos - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
 
     <meta name="author" content="ciberbross90">
     <meta name="copyright" content="ciberbross90">
 
     <meta name="description" content="Distribuidor oficial de pistolas de pintura NA y Norber Alonso. Especialistas en chapa y pintura con envío a toda España y Europa. Taller experto en chapa, pintura automotriz de alta gama, lunas y cristales en Serranillos del Valle. Distribuidor oficial de pistolas de pintura NA y Norber Alonso. ¡Calidad Crazy Business!">
     <meta name="keywords" content="pistolas pintura NA, Norber Alonso, herramientas pintura automotriz Europa, taller chapa y pintura Madrid, Crazy Cars Garage shop, taller chapa y pintura serranillos del valle, taller chapa y pintura griñon, taller chapa y pintura humanes de madrid, taller chapa y pintura cubas de la sagra, taller chapa y pintura carranque, lunas coche, pistolas pintura NA, pistolas pintura Norber Alonso, pistolas pintura envio a España, pistolas pintura envio a Europa, Crazy Cars Garage, Crazy Bussiness">
-    <meta name="robots" content="index, follow">,
+    <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="Crazy Cars Garage - Expertos en Chapa y Pintura - Crazy Business">
     <meta property="og:description" content="Especialistas en chapa, carrocería, pintura de alta gama, gestion de lunas y cristales, y distribución oficial de herramientas de pintura profesional.">
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
+<style>
         :root {
             --crazy-turquoise: #000000; /* Fondo negro solicitado */
             --crazy-fuchsia: #FF00FF;
@@ -62,87 +62,27 @@
             text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
         }
 
-        .gallery-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 4px solid white;
+        .story-card {
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 10px 10px 0px var(--crazy-dark);
+            border: 3px solid var(--crazy-dark);
+        }
+
+        .accent-box {
+            background-color: var(--crazy-fuchsia);
+            color: white;
+            transform: rotate(-1deg);
             box-shadow: 5px 5px 0px var(--crazy-dark);
         }
-        .gallery-item:hover {
-            transform: scale(1.03) rotate(1deg);
-            border-color: var(--crazy-fuchsia);
-            box-shadow: 8px 8px 0px rgba(255, 0, 255, 0.5);
-            z-index: 10;
-        }
 
-        .before-after-container {
-            position: relative;
-            overflow: hidden;
-            border: 4px solid var(--crazy-fuchsia);
-            border-radius: 1rem; /* rounded-xl */
-            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-        }
-
-        .before-image, .after-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .after-image {
-            clip-path: inset(0 0 0 50%); /* Start with half clip */
-        }
-
-        .before-after-slider {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            height: 4px;
-            background: var(--crazy-fuchsia);
-            outline: none;
-            opacity: 0.7;
-            transition: opacity .2s;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            z-index: 1; /* For mobile if touch-based */
-        }
-
-        .before-after-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: var(--crazy-fuchsia);
-            cursor: ew-resize;
-            box-shadow: 0 0 0 5px white, 0 0 0 8px var(--crazy-fuchsia);
-        }
-
-        .before-after-slider::-moz-range-thumb {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: var(--crazy-fuchsia);
-            cursor: ew-resize;
-            box-shadow: 0 0 0 5px white, 0 0 0 8px var(--crazy-fuchsia);
-        }
-	
-	@keyframes bounce-slow {
+        @keyframes bounce-slow {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
 
         .animate-bounce-slow {
             animation: bounce-slow 3s infinite ease-in-out;
-        }
-
-        .modal-content {
-            max-height: 70vh;
-            overflow-y: auto;
         }
         #cookieBanner {
             position: fixed;
