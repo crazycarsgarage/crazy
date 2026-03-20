@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/tienda.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/chapa_pintura_lunas_serranillos_del_valle.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/pistola_R25_Smiley.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/Red_edition_pro.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/Green_edition_pro.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/R78_pintacarros.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/vulcan_compact_pro.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/manometro_volumetrico_NA.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/autos_locos.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/podcast.html</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/historia.html</loc>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/carrito.html</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/pago.html</loc>
+    <priority>0.20</priority>
+  </url>
+
+</urlset>
