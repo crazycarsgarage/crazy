@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Cars Garage - Tienda de venta - Crazy Business | Tienda de Herramientas de Pintura Distribuidor Norber Alonso y Taller de Chapa y Pintura</title>
+    <title>Crazy Cars Garage - Cesta de la compra - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
 
     <meta name="author" content="ciberbross90">
     <meta name="copyright" content="ciberbross90">
 
-    <meta name="description" content="Distribuidor oficial de pistolas de pintura NA y Norber Alonso. Especialistas en chapa y pintura con envío a toda España y Europa. Taller experto en chapa, pintura automotriz de alta gama, lunas y cristales en Serranillos del Valle.">
+    <meta name="description" content="Distribuidor oficial de pistolas de pintura NA y Norber Alonso. Especialistas en chapa y pintura con envío a toda España y Europa. Taller experto en chapa, pintura automotriz de alta gama, lunas y cristales en Serranillos del Valle. Distribuidor oficial de pistolas de pintura NA y Norber Alonso. ¡Calidad Crazy Business!">
     <meta name="keywords" content="pistolas pintura NA, Norber Alonso, herramientas pintura automotriz Europa, taller chapa y pintura Madrid, Crazy Cars Garage shop, taller chapa y pintura serranillos del valle, taller chapa y pintura griñon, taller chapa y pintura humanes de madrid, taller chapa y pintura cubas de la sagra, taller chapa y pintura carranque, lunas coche, pistolas pintura NA, pistolas pintura Norber Alonso, pistolas pintura envio a España, pistolas pintura envio a Europa, Crazy Cars Garage, Crazy Bussiness">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">,
     
     <meta property="og:title" content="Crazy Cars Garage - Expertos en Chapa y Pintura - Crazy Business">
     <meta property="og:description" content="Especialistas en chapa, carrocería, pintura de alta gama, gestion de lunas y cristales, y distribución oficial de herramientas de pintura profesional.">
@@ -25,10 +25,9 @@
 
     <style>
         :root {
-            --crazy-turquoise: #000000; /* Fondo negro solicitado */
+            --crazy-turquoise: #000000; 
             --crazy-fuchsia: #FF00FF;
             --crazy-dark: #1a1a1a;
-            --accent-turquoise: #40E0D0;
         }
 
         body {
@@ -38,23 +37,19 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .nav-item, .font-crazy {
-            font-family: 'Permanent Marker', cursive;
-        }
+        .font-crazy { font-family: 'Permanent Marker', cursive; }
 
         .neon-title {
             color: #fff;
-            text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px var(--crazy-fuchsia), 0 0 82px var(--crazy-fuchsia);
+            text-shadow: 0 0 10px #fff, 0 0 20px var(--crazy-fuchsia);
         }
 
-        .nav-bar {
-            background-color: var(--crazy-fuchsia);
-            box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4);
-        }
+        .nav-bar { background-color: var(--crazy-fuchsia); width: 100%; }
 
-        .nav-link {
-            transition: all 0.3s ease;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+        .cart-container {
+            background: white;
+            border: 4px solid var(--crazy-dark);
+            box-shadow: 10px 10px 0px var(--crazy-fuchsia);
         }
 
         .product-card {
@@ -124,28 +119,16 @@
             display: block; 
         }
     </style>
-
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org/",
+  "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AutoPartsStore",
-      "@id": "https://crazycarsgarage.github.io/crazycars/tienda.html#organization",
-      "name": "Crazy Cars Garage & Shop",
-      "url": "https://crazycarsgarage.github.io/crazycars/tienda.html",
-      "logo": "https://crazycarsgarage.github.io/crazy/crazy logo.webp",
-      "description": "Distribuidor oficial de pistolas de pintura NA y Norber Alonso. Envío profesional a toda España y Europa.",
-      "areaServed": [
-        {
-          "@type": "Country",
-          "name": "Spain"
-        },
-        {
-          "@type": "Continent",
-          "name": "Europe"
-        }
-      ],
+      "@type": "AutoRepair",
+      "@id": "https://crazycarsgarage.github.io/crazycars/#taller",
+      "name": "Crazy Cars Garage",
+      "image": "https://crazycarsgarage.github.io/crazy logo.webp",
+      "description": "Taller experto en chapa, carrocería y pintura de alta gama en Madrid.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "CALLE LOS CEREZOS 32", 
@@ -154,103 +137,41 @@
         "addressRegion": "Madrid",
         "addressCountry": "ES"
       },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "itemOffered": { "@type": "Service", "name": "Chapa y Pintura" },
+        "description": "Servicio local en la zona sur de Madrid"
+      }
+    },
+    {
+      "@type": "AutoPartsStore",
+      "@id": "https://crazycarsgarage.github.io/crazycars/#tienda",
+      "name": "Crazy Cars Garage & Shop",
+      "description": "Distribuidor oficial de pistolas Norber Alonso y NA. Venta online de herramientas profesionales con envío nacional e internacional.",
+      "url": "https://crazycarsgarage.github.io/tienda.html",
+      "telephone": "+34652748175",
+      "areaServed": [
+        { "@type": "Country", "name": "Spain" },
+        { "@type": "Continent", "name": "Europe" }
+      ],
       "sameAs": [
         "https://www.facebook.com/david.vergaracaraballos/?locale=es_LA",
         "https://www.instagram.com/crazy_cars_garage_davidvergara?igsh=Zzlia2ozbXNvNG9u"
-      ]
-    },
-    {
-      "@type": "Product",
-      "name": "Pistola R25 NA CSC Hibrida SMILEY",
-      "image": "https://crazycarsgarage.github.io/crazycars/smiley.webp",
-      "description": "Pistola híbrida profesional edición Smiley para acabados de alta gama.",
-      "brand": { "@type": "Brand", "name": "NA" },
-      "sku": "R25-SMILEY",
-      "offers": {
-        "@type": "Offer",
-        "price": "320.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "areaServed": ["ES", "EU"]
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Pistola R25 NA CSC Hibrida RED EDITION PRO",
-      "image": "https://crazycarsgarage.github.io/crazycars/Red_edition_pro.webp",
-      "description": "Edición profesional Red Edition Pro para pintores exigentes.",
-      "brand": { "@type": "Brand", "name": "NA" },
-      "sku": "R25-RED-PRO",
-      "offers": {
-        "@type": "Offer",
-        "price": "320.01",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "areaServed": ["ES", "EU"]
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Pistola R25 NA HVLP GREN EDITION PRO",
-      "image": "https://crazycarsgarage.github.io/crazycars/Green_edition_pro.webp",
-      "description": "Tecnología HVLP Green Edition para máximo ahorro y acabado espejo.",
-      "brand": { "@type": "Brand", "name": "NA" },
-      "sku": "R25-GREEN-PRO",
-      "offers": {
-        "@type": "Offer",
-        "price": "320.01",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "areaServed": ["ES", "EU"]
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Pistola R25 NA CSC R78 ROY PINTACARROS",
-      "image": "https://crazycarsgarage.github.io/crazycars/roy_pintacarros.webp",
-      "description": "Edición especial Roy Pintacarros. Precisión extrema.",
-      "brand": { "@type": "Brand", "name": "NA" },
-      "sku": "R25-ROY",
-      "offers": {
-        "@type": "Offer",
-        "price": "320.01",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "areaServed": ["ES", "EU"]
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Pistola R25 NA CSC VULKAN PRO",
-      "image": "https://crazycarsgarage.github.io/crazycars/vulcan.webp",
-      "description": "Pistola Vulkan Pro. Potencia y control para el taller profesional.",
-      "brand": { "@type": "Brand", "name": "NA" },
-      "sku": "R25-VULKAN",
-      "offers": {
-        "@type": "Offer",
-        "price": "320.01",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "areaServed": ["ES", "EU"]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo de Herramientas",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Pistolas de pintura profesionales NA y Norber Alonso"
+            }
+          }
+        ]
       }
     }
-{
-      "@type": "Product",
-      "name": "Manometro Volumetrico NA COMPACT",
-      "image": "https://crazycarsgarage.github.io/crazycars/Manometro_NA_compact.webp",
-      "description": "Manometro Volumetrico NA COMPACT.",
-      "brand": { "@type": "Brand", "name": "NA" },
-      "sku": "Manometro COMPACT",
-      "offers": {
-        "@type": "Offer",
-        "price": "29.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "areaServed": ["ES", "EU"]
-      }
-    },
   ]
 }
 </script>
@@ -261,8 +182,21 @@
 
 <body class="flex flex-col min-h-screen">
 
+<div id="cookieBanner" class="border-t-4 border-[#FF00FF] p-6 shadow-[0_-10px_50px_rgba(0,0,0,0.5)] bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-gray-800">
+        <div class="text-sm text-justify leading-relaxed">
+            Este portal web únicamente utiliza cookies propias con finalidad técnica, no recaba ni cede datos de carácter personal de los usuarios sin su conocimiento. Sin embargo, contiene enlaces a sitios web de terceros con políticas de privacidad ajenas a la de Crazy Business que usted podrá decidir si acepta o no cuando acceda a ellos. 
+            <button onclick="toggleModal('modalCookies')" class="font-bold text-blue-700 underline ml-1 hover:text-[#FF00FF]">Política de Cookies</button>
+        </div>
+        <div class="flex gap-4">
+            <button onclick="closeCookieBanner()" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-bold uppercase text-xs hover:bg-gray-300 transition-all whitespace-nowrap">Rechazar</button>
+            <button onclick="closeCookieBanner()" class="bg-black text-white px-10 py-3 rounded-full font-bold uppercase text-xs hover:bg-[#FF00FF] transition-all whitespace-nowrap">Aceptar</button>
+        </div>
+    </div>
+</div>
+
 <section class="relative w-full h-[25vh] md:h-[55vh] overflow-hidden">
-    <img src="urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo Crazy Cars Garage">
+    <img src="Urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo Crazy Cars Garage">
     <img src="crazy art.webp" class="absolute top-0 right-0 h-full w-auto object-cover z-10" alt="Arte Crazy Cars Garage">
 </section>
 
@@ -647,53 +581,20 @@
     </div>
 </div>
 
-<div id="cookie-law-banner" class="fixed bottom-0 left-0 w-full z-[9999] p-4 transform transition-translate duration-500">
-    <div class="max-w-4xl mx-auto bg-black border border-[#40E0D0]/30 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] p-6 md:p-8 backdrop-blur-md">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="text-center md:text-left">
-                <h3 class="text-[#40E0D0] font-marker text-xl mb-2">¿UNAS COOKIES, CRAZY?</h3>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Utilizamos cookies para que tu experiencia en nuestra web sea de alta gama. Al continuar, aceptas que usemos estas herramientas para mejorar tu navegación.
-                </p>
-            </div>
-            <div class="flex gap-4 shrink-0">
-                <button onclick="saveCookieChoice()" class="bg-[#40E0D0] text-black px-8 py-3 rounded-xl font-bold uppercase text-sm hover:scale-105 transition-all shadow-[0_0_15px_rgba(64,224,208,0.4)]">
-                    ACEPTAR
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
-    function saveCookieChoice() {
-        const banner = document.getElementById('cookie-law-banner');
-        if (banner) {
-            banner.style.display = 'none';
-            localStorage.setItem('crazy_cookies_accepted', 'true');
+    function toggleModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.toggle('hidden');
+        if (!modal.classList.contains('hidden')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            const anyOpen = document.querySelectorAll('[id^="modal"]:not(.hidden)').length > 0;
+            if (!anyOpen) document.body.style.overflow = 'auto';
         }
     }
 
-    (function checkCookies() {
-        const alreadyAccepted = localStorage.getItem('crazy_cookies_accepted');
-        const banner = document.getElementById('cookie-law-banner');
-        
-        if (alreadyAccepted === 'true' && banner) {
-            // Si ya se aceptó, eliminamos el banner antes de que se vea
-            banner.style.display = 'none';
-        }
-    })();
-
-    function toggleModal(id) {
-        const modal = document.getElementById(id);
-        if (modal) {
-            modal.classList.toggle('hidden');
-            if (!modal.classList.contains('hidden')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-        }
+    function closeCookieBanner() {
+        document.getElementById('cookieBanner').style.display = 'none';
     }
 </script>
 
@@ -750,23 +651,16 @@
             renderCarrito();
         }
 
-	function irAPagar() {
-	    let carritoParaEnviar = JSON.parse(localStorage.getItem('crazy_cart')) || [];
-	    if (carritoParaEnviar.length === 0) {
-	        alert("El carrito está vacío");
-	        return;
-	    }
-	    localStorage.setItem('carrito', JSON.stringify(carritoParaEnviar));
-    
-	    window.location.href = "pago.html";
-	}
-
-	function guardarParaPago() {
-	    localStorage.setItem('carrito', JSON.stringify(cart)); 
-	}
+        function irAPagar() {
+            let carrito = JSON.parse(localStorage.getItem('crazy_cart')) || [];
+            if (carrito.length === 0) {
+                alert("El carrito está vacío");
+                return;
+            }
+            window.location.href = "pago.html";
+        }
 
         document.addEventListener('DOMContentLoaded', renderCarrito);
     </script>
-
 </body>
 </html>

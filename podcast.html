@@ -38,7 +38,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .nav-item, .font-crazy {
+        h1, h2, h3, .nav-item {
             font-family: 'Permanent Marker', cursive;
         }
 
@@ -111,7 +111,7 @@
       "@type": "AutoRepair",
       "@id": "https://crazycarsgarage.github.io/crazycars/#taller",
       "name": "Crazy Cars Garage",
-      "image": "https://crazycarsgarage.github.io/crazycars/crazy logo.webp",
+      "image": "https://crazycarsgarage.github.io/crazy logo.webp",
       "description": "Taller experto en chapa, carrocería y pintura de alta gama en Madrid.",
       "address": {
         "@type": "PostalAddress",
@@ -132,7 +132,7 @@
       "@id": "https://crazycarsgarage.github.io/crazycars/#tienda",
       "name": "Crazy Cars Garage & Shop",
       "description": "Distribuidor oficial de pistolas Norber Alonso y NA. Venta online de herramientas profesionales con envío nacional e internacional.",
-      "url": "https://crazycarsgarage.github.io/crazycars/tienda.html",
+      "url": "https://crazycarsgarage.github.io/tienda.html",
       "telephone": "+34652748175",
       "areaServed": [
         { "@type": "Country", "name": "Spain" },
@@ -165,8 +165,21 @@
 </head>
 <body class="flex flex-col min-h-screen">
 
+<div id="cookieBanner" class="border-t-4 border-[#FF00FF] p-6 shadow-[0_-10px_50px_rgba(0,0,0,0.5)] bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-gray-800">
+        <div class="text-sm text-justify leading-relaxed">
+            Este portal web únicamente utiliza cookies propias con finalidad técnica, no recaba ni cede datos de carácter personal de los usuarios sin su conocimiento. Sin embargo, contiene enlaces a sitios web de terceros con políticas de privacidad ajenas a la de Crazy Business que usted podrá decidir si acepta o no cuando acceda a ellos. 
+            <button onclick="toggleModal('modalCookies')" class="font-bold text-blue-700 underline ml-1 hover:text-[#FF00FF]">Política de Cookies</button>
+        </div>
+        <div class="flex gap-4">
+            <button onclick="closeCookieBanner()" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-bold uppercase text-xs hover:bg-gray-300 transition-all whitespace-nowrap">Rechazar</button>
+            <button onclick="closeCookieBanner()" class="bg-black text-white px-10 py-3 rounded-full font-bold uppercase text-xs hover:bg-[#FF00FF] transition-all whitespace-nowrap">Aceptar</button>
+        </div>
+    </div>
+</div>
+
 <section class="relative w-full h-[25vh] md:h-[55vh] overflow-hidden">
-    <img src="urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo Crazy Cars Garage">
+    <img src="Urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo Crazy Cars Garage">
     <img src="crazy art.webp" class="absolute top-0 right-0 h-full w-auto object-cover z-10" alt="Arte Crazy Cars Garage">
 </section>
 
@@ -214,79 +227,59 @@
 
 	<div class="video-card rounded-3xl overflow-hidden flex flex-col h-full">
             <div class="aspect-video w-full bg-black">
-                <video controls poster="Mazas_y_Catapultas5.webp" class="w-full rounded-xl shadow-2xl">
-                    <source src="Mazas_y_Catapultas_5.mp4" type="video/mp4">
+                <video controls class="w-full h-full object-cover shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+                    <source src="MPG_28022626.mp4" type="video/mp4">
                     Tu navegador no soporta el video.
                 </video>
             </div>
             <div class="p-6 flex-grow bg-[#0a0a0a]">
                 <span class="text-[#FF00FF] font-bold text-xs uppercase tracking-widest">Entrevista Team Bautista</span>
-                <h3 class="font-crazy text-xl text-white mt-2 uppercase">Autos Locos VS Team Bautista</h3>
+                <h3 class="font-crazy text-xl text-white mt-2 uppercase">28 de Febrero 2026</h3>
                 <p class="text-gray-400 mt-2 text-sm">Dale al play y conoce nuestra ultima entrevista.</p>
             </div>
         </div>
         
         <div class="video-card rounded-3xl overflow-hidden flex flex-col h-full">
             <div class="aspect-video w-full bg-black">
-                <video controls poster="Mazas_y_Catapultas4_1.webp" class="w-full rounded-xl shadow-2xl">
-                    <source src="Mazas_y_Catapultas4_1.mp4" type="video/mp4">
+                <video controls class="w-full h-full object-cover shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+                    <source src="MPG_310126.mp4" type="video/mp4">
                     Tu navegador no soporta el video.
                 </video>
             </div>
             <div class="p-6 flex-grow bg-[#0a0a0a]">
-                <span class="text-[#FF00FF] font-bold text-xs uppercase tracking-widest">Entrevista Ivan Martinez part1</span>
-                <h3 class="font-crazy text-xl text-white mt-2 uppercase">Talleres MB</h3>
-                <p class="text-gray-400 mt-2 text-sm">Entrevista super divertida.</p>
+                <span class="text-[#FF00FF] font-bold text-xs uppercase tracking-widest">Entrevista Adrian cuevas</span>
+                <h3 class="font-crazy text-xl text-white mt-2 uppercase">31 de Enero 2026</h3>
+                <p class="text-gray-400 mt-2 text-sm">Entra y conoce al Dios del Blog</p>
             </div>
         </div>
 
         <div class="video-card rounded-3xl overflow-hidden flex flex-col h-full">
             <div class="aspect-video w-full bg-black">
-                <video controls poster="Mazas_y_Catapultas4_2.webp" class="w-full rounded-xl shadow-2xl">
-                    <source src="Mazas_y_Catapultas4_2.mp4" type="video/mp4">
+                <video controls class="w-full h-full object-cover shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+                    <source src="MPG_250126.mp4" type="video/mp4">
                     Tu navegador no soporta el video.
                 </video>
             </div>
             <div class="p-6 flex-grow bg-[#0a0a0a]">
-                <span class="text-[#FF00FF] font-bold text-xs uppercase tracking-widest">Entrevista Ivan Martinez part2</span>
-                <h3 class="font-crazy text-xl text-white mt-2 uppercase">Talleres MB</h3>
-                <p class="text-gray-400 mt-2 text-sm">Entrevista super divertida.</p>
+                <span class="text-[#FF00FF] font-bold text-xs uppercase tracking-widest">Entrevista a David Redondo</span>
+                <h3 class="font-crazy text-xl text-white mt-2 uppercase">Entrevistas a 1000 RPM</h3>
+                <p class="text-gray-400 mt-2 text-sm">Gente del motor compartiendo sus mejores anécdotas en el taller.</p>
             </div>
         </div>
 
-<div class="col-span-full text-xl md:text-2xl font-crazy text-white mt-8 mb-5 uppercase font-marker text-left">
-    <p class="whitespace-nowrap">
-        <span class="text-[#40E0D0]">
-            <a href="https://www.instagram.com/reel/DULvls2jA8a/?igsh=dHVvczJsZW9icmJz" target="_blank">
-                Mazas y Catapultas #3 Adrian Cuevas,
-            </a>
-        </span> 
-        si te lo perdiste.
-    </p>
-</div>
-
-<div class="col-span-full text-xl md:text-2xl font-crazy text-white mt-8 mb-5 uppercase font-marker text-left">
-    <p class="whitespace-nowrap">
-        <span class="text-[#40E0D0]">
-            <a href="https://www.instagram.com/reel/DT7tDz6DPyf/?igsh=NzVsaHo0cGVpbm9q" target="_blank">
-                Mazas y Catapultas #2 David Redondo,
-            </a>
-        </span> 
-        si te lo perdiste.
-    </p>
-</div>
-
-<div class="col-span-full text-xl md:text-2xl font-crazy text-white mt-8 mb-5 uppercase font-marker text-left">
-    <p class="whitespace-nowrap">
-        <span class="text-[#40E0D0]">
-            <a href="https://www.instagram.com/reel/DSPg-GqjPVS/?igsh=emg0dXhtZmlyZ3Bs" target="_blank">
-                Mazas y Catapultas #1 Luciano y Nehu,
-            </a>
-        </span> 
-        si te lo perdiste.
-    </p>
-</div>
-
+        <div class="video-card rounded-3xl overflow-hidden flex flex-col h-full">
+            <div class="aspect-video w-full bg-black">
+                <video controls class="w-full h-full object-cover shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+                    <source src="MPG_141225.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="p-6 flex-grow bg-[#0a0a0a]">
+                <span class="text-[#FF00FF] font-bold text-xs uppercase tracking-widest">Entrevista a Luciano y Nehu</span>
+                <h3 class="font-crazy text-xl text-white mt-2 uppercase">Mazas y Catapultas #01</h3>
+                <p class="text-gray-400 mt-2 text-sm">Nuestra primera toma de contacto con el micro y los invitados.</p>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -661,53 +654,20 @@
     </div>
 </div>
 
-<div id="cookie-law-banner" class="fixed bottom-0 left-0 w-full z-[9999] p-4 transform transition-translate duration-500">
-    <div class="max-w-4xl mx-auto bg-black border border-[#40E0D0]/30 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] p-6 md:p-8 backdrop-blur-md">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="text-center md:text-left">
-                <h3 class="text-[#40E0D0] font-marker text-xl mb-2">¿UNAS COOKIES, CRAZY?</h3>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Utilizamos cookies para que tu experiencia en nuestra web sea de alta gama. Al continuar, aceptas que usemos estas herramientas para mejorar tu navegación.
-                </p>
-            </div>
-            <div class="flex gap-4 shrink-0">
-                <button onclick="saveCookieChoice()" class="bg-[#40E0D0] text-black px-8 py-3 rounded-xl font-bold uppercase text-sm hover:scale-105 transition-all shadow-[0_0_15px_rgba(64,224,208,0.4)]">
-                    ACEPTAR
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
-    function saveCookieChoice() {
-        const banner = document.getElementById('cookie-law-banner');
-        if (banner) {
-            banner.style.display = 'none';
-            localStorage.setItem('crazy_cookies_accepted', 'true');
+    function toggleModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.toggle('hidden');
+        if (!modal.classList.contains('hidden')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            const anyOpen = document.querySelectorAll('[id^="modal"]:not(.hidden)').length > 0;
+            if (!anyOpen) document.body.style.overflow = 'auto';
         }
     }
 
-    (function checkCookies() {
-        const alreadyAccepted = localStorage.getItem('crazy_cookies_accepted');
-        const banner = document.getElementById('cookie-law-banner');
-        
-        if (alreadyAccepted === 'true' && banner) {
-            // Si ya se aceptó, eliminamos el banner antes de que se vea
-            banner.style.display = 'none';
-        }
-    })();
-
-    function toggleModal(id) {
-        const modal = document.getElementById(id);
-        if (modal) {
-            modal.classList.toggle('hidden');
-            if (!modal.classList.contains('hidden')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-        }
+    function closeCookieBanner() {
+        document.getElementById('cookieBanner').style.display = 'none';
     }
 </script>
 
