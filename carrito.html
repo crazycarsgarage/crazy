@@ -119,16 +119,28 @@
             display: block; 
         }
     </style>
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org/",
   "@graph": [
     {
-      "@type": "AutoRepair",
-      "@id": "https://crazycarsgarage.github.io/crazycars/#taller",
-      "name": "Crazy Cars Garage",
-      "image": "https://crazycarsgarage.github.io/crazy logo.webp",
-      "description": "Taller experto en chapa, carrocería y pintura de alta gama en Madrid.",
+      "@type": "AutoPartsStore",
+      "@id": "https://crazycarsgarage.github.io/tienda.html#organization",
+      "name": "Crazy Cars Garage & Shop",
+      "url": "https://crazycarsgarage.github.io/crazycars/tienda.html",
+      "logo": "https://crazycarsgarage.github.io/crazycars/crazy logo.webp",
+      "description": "Distribuidor oficial de pistolas de pintura NA y Norber Alonso. Envío profesional a toda España y Europa.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Spain"
+        },
+        {
+          "@type": "Continent",
+          "name": "Europe"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "CALLE LOS CEREZOS 32", 
@@ -137,39 +149,99 @@
         "addressRegion": "Madrid",
         "addressCountry": "ES"
       },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "itemOffered": { "@type": "Service", "name": "Chapa y Pintura" },
-        "description": "Servicio local en la zona sur de Madrid"
-      }
-    },
-    {
-      "@type": "AutoPartsStore",
-      "@id": "https://crazycarsgarage.github.io/crazycars/#tienda",
-      "name": "Crazy Cars Garage & Shop",
-      "description": "Distribuidor oficial de pistolas Norber Alonso y NA. Venta online de herramientas profesionales con envío nacional e internacional.",
-      "url": "https://crazycarsgarage.github.io/tienda.html",
-      "telephone": "+34652748175",
-      "areaServed": [
-        { "@type": "Country", "name": "Spain" },
-        { "@type": "Continent", "name": "Europe" }
-      ],
       "sameAs": [
         "https://www.facebook.com/david.vergaracaraballos/?locale=es_LA",
         "https://www.instagram.com/crazy_cars_garage_davidvergara?igsh=Zzlia2ozbXNvNG9u"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Catálogo de Herramientas",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Pistolas de pintura profesionales NA y Norber Alonso"
-            }
-          }
-        ]
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "Pistola R25 NA CSC Hibrida SMILEY",
+      "image": "https://crazycarsgarage.github.io/crazycars/smiley.webp",
+      "description": "Pistola híbrida profesional edición Smiley para acabados de alta gama.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "R25-SMILEY",
+      "offers": {
+        "@type": "Offer",
+        "price": "320.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "areaServed": ["ES", "EU"]
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Pistola R25 NA CSC Hibrida RED EDITION PRO",
+      "image": "https://crazycarsgarage.github.io/crazycars/red_edition_pro.webp",
+      "description": "Edición profesional Red Edition Pro para pintores exigentes.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "R25-RED-PRO",
+      "offers": {
+        "@type": "Offer",
+        "price": "320.01",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "areaServed": ["ES", "EU"]
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Pistola R25 NA HVLP GREN EDITION PRO",
+      "image": "https://crazycarsgarage.github.io/crazycars/green_edition_pro.webp",
+      "description": "Tecnología HVLP Green Edition para máximo ahorro y acabado espejo.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "R25-GREEN-PRO",
+      "offers": {
+        "@type": "Offer",
+        "price": "320.01",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "areaServed": ["ES", "EU"]
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Pistola R25 NA CSC R78 ROY PINTACARROS",
+      "image": "https://crazycarsgarage.github.io/crazycars/roy_pintacarros.webp",
+      "description": "Edición especial Roy Pintacarros. Precisión extrema.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "R25-ROY",
+      "offers": {
+        "@type": "Offer",
+        "price": "320.01",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "areaServed": ["ES", "EU"]
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Pistola R25 NA CSC VULKAN PRO",
+      "image": "https://crazycarsgarage.github.io/crazycars/vulcan.webp",
+      "description": "Pistola Vulkan Pro. Potencia y control para el taller profesional.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "R25-VULKAN",
+      "offers": {
+        "@type": "Offer",
+        "price": "320.01",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "areaServed": ["ES", "EU"]
+      }
+    {
+      "@type": "Product",
+      "name": "Manometro Volumetrico NA COMPACT",
+      "image": "https://crazycarsgarage.github.io/crazycars/manometro_NA_compact.webp",
+      "description": "Manometro Volumetrico Norber Alonso de calidad.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "Manometro_compact",
+      "offers": {
+        "@type": "Offer",
+        "price": "29.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "areaServed": ["ES", "EU"]
       }
     }
   ]
@@ -182,21 +254,8 @@
 
 <body class="flex flex-col min-h-screen">
 
-<div id="cookieBanner" class="border-t-4 border-[#FF00FF] p-6 shadow-[0_-10px_50px_rgba(0,0,0,0.5)] bg-white">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-gray-800">
-        <div class="text-sm text-justify leading-relaxed">
-            Este portal web únicamente utiliza cookies propias con finalidad técnica, no recaba ni cede datos de carácter personal de los usuarios sin su conocimiento. Sin embargo, contiene enlaces a sitios web de terceros con políticas de privacidad ajenas a la de Crazy Business que usted podrá decidir si acepta o no cuando acceda a ellos. 
-            <button onclick="toggleModal('modalCookies')" class="font-bold text-blue-700 underline ml-1 hover:text-[#FF00FF]">Política de Cookies</button>
-        </div>
-        <div class="flex gap-4">
-            <button onclick="closeCookieBanner()" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-bold uppercase text-xs hover:bg-gray-300 transition-all whitespace-nowrap">Rechazar</button>
-            <button onclick="closeCookieBanner()" class="bg-black text-white px-10 py-3 rounded-full font-bold uppercase text-xs hover:bg-[#FF00FF] transition-all whitespace-nowrap">Aceptar</button>
-        </div>
-    </div>
-</div>
-
 <section class="relative w-full h-[25vh] md:h-[55vh] overflow-hidden">
-    <img src="Urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo Crazy Cars Garage">
+    <img src="urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo Crazy Cars Garage">
     <img src="crazy art.webp" class="absolute top-0 right-0 h-full w-auto object-cover z-10" alt="Arte Crazy Cars Garage">
 </section>
 
@@ -581,22 +640,59 @@
     </div>
 </div>
 
+<div id="cookie-law-banner" class="fixed bottom-0 left-0 w-full z-[9999] p-4">
+    <div class="max-w-4xl mx-auto bg-black border border-[#40E0D0]/30 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.9)] p-6 backdrop-blur-md">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-[#40E0D0] font-marker text-xl mb-1">¿UNAS COOKIES, CRAZY?</h3>
+                <p class="text-gray-300 text-xs md:text-sm leading-relaxed">
+                    Usamos cookies para mejorar tu experiencia. Al aceptar, nos ayudas a optimizar la web. Si rechazas, solo usaremos las técnicas necesarias.
+                </p>
+            </div>
+            <div class="flex gap-3 shrink-0">
+                <button onclick="handleCookies('rechazado')" class="border border-gray-500 text-gray-400 px-6 py-2 rounded-xl font-bold uppercase text-xs hover:bg-gray-800 transition-all">
+                    RECHAZAR
+                </button>
+                <button onclick="handleCookies('aceptado')" class="bg-[#40E0D0] text-black px-8 py-2 rounded-xl font-bold uppercase text-xs hover:scale-105 transition-all shadow-[0_0_15px_rgba(64,224,208,0.4)]">
+                    ACEPTAR
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    function toggleModal(id) {
-        const modal = document.getElementById(id);
-        modal.classList.toggle('hidden');
-        if (!modal.classList.contains('hidden')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            const anyOpen = document.querySelectorAll('[id^="modal"]:not(.hidden)').length > 0;
-            if (!anyOpen) document.body.style.overflow = 'auto';
+    function saveCookieChoice() {
+        const banner = document.getElementById('cookie-law-banner');
+        if (banner) {
+            banner.style.display = 'none';
+            // Guardamos en el navegador que ya se aceptó
+            localStorage.setItem('crazy_cookies_accepted', 'true');
         }
     }
 
-    function closeCookieBanner() {
-        document.getElementById('cookieBanner').style.display = 'none';
+    (function checkCookies() {
+        const alreadyAccepted = localStorage.getItem('crazy_cookies_accepted');
+        const banner = document.getElementById('cookie-law-banner');
+        
+        if (alreadyAccepted === 'true' && banner) {
+            banner.style.display = 'none';
+        }
+    })();
+
+    function toggleModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
     }
 </script>
+
 
     <script>
         function renderCarrito() {
