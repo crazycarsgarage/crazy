@@ -23,6 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <script src="https://js.stripe.com/v3/"></script>
+
     <style>
         :root {
             --crazy-turquoise: #000000; /* Fondo negro solicitado */
@@ -290,7 +292,7 @@
                             <input type="text" placeholder="Ciudad" class="input-gris" required>
                         </div>
                         <div style="width: 30%;">
-                            <input type="text" placeholder="C.P." class="input-gris" required>
+                            <input type="text" placeholder="Codigo Postal" class="input-gris" required>
                         </div>
                     </div>
 
@@ -342,11 +344,11 @@
                     <input type="email" placeholder="Email de contacto" class="input-gris" required>
                     <input type="tel" placeholder="Teléfono" class="input-gris" required>
                     
-                    <a href="build.html" class="nav-link px-3 py-2 block"><button type="submit" class="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-[#FF00FF] transition-all transform hover:scale-105 shadow-lg uppercase font-crazy text-xl mt-6">
-                        Confirmar y Pagar
-                    </button></a>
+		<button id="checkout-button" onclick="procesarPago()" class="w-full ...">
+		    CONFIRMAR Y PAGAR
+		</button>
 			<div class="flex justify-center w-full mt-4 mb-8">
-			    <a href="carrito.html" class="px-3 py-2 block text-[#FF00FF] hover:text-white transition-colors font-crazy text-xl"><i class="fas fa-arrow-left mr-2"></i> Volver</a>
+			<a href="carrito.html" class="inline-block bg-white text-[#FF00FF] px-4 py-2 rounded-full font-crazy  hover:bg-[#40E0D0] transition-colors text-xl"><i class="fas fa-arrow-left mr-2"></i> Volver</a>
 			</div>
                 </form>
             </div>
@@ -802,6 +804,117 @@
             e.preventDefault();
             alert("¡Pedido recibido! Redirigiendo a pasarela de pago segura...");
         });
+async function procesarPago() {
+    const btn = document.getElementById('checkout-button');
+    
+    const nombre = document.querySelector('input[placeholder="Nombre"]').value;
+    const email = document.querySelector('input[placeholder="Correo electrónico"]').value;
+    const direccion = document.querySelector('input[placeholder="Dirección"]').value;
+const codigoPostal = document.querySelector('input[placeholder="Código Postal"]').value;
+    const ciudad = document.querySelector('input[placeholder="Ciudad"]').value;
+    const pais = document.getElementById('pais-seleccion').value;
+
+    if (!nombre || !email || !direccion || !ciudad || pais === "") {
+        alert("Por favor, rellena todos los datos de envío.");
+        return;
+    }
+
+body: JSON.stringify({
+    items: carrito,
+    cliente: { ... },
+    envioPrecio: parseFloat(document.getElementById('gastos-envio').innerText)
+}),
+
+    btn.disabled = true;
+    btn.innerText = "PROCESANDO PAGO...";
+
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || JSON.parse(localStorage.getItem('crazy_cart')) || [];
+
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        btn.disabled = false;
+        btn.innerText = "CONFIRMAR Y PAGAR";
+        return;
+    }
+
+    try {
+// 4. Llamada al Backend (el servidor Node.js que creamos)
+        // Nota: Si ya estás en internet, cambia 'localhost:3000' por tu URL real
+        const response = await fetch('http://localhost:3000/create-checkout-session', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                items: carrito,
+                cliente: {
+                    nombre: nombre,
+                    email: email,
+                    direccion: direccion,
+Gemini ha dicho
+Para que el Código Postal aparezca en los correos, necesitamos capturarlo en el Frontend y luego procesarlo en el Backend. Aquí tienes las modificaciones exactas para ambos archivos:
+
+1. Modificación en el Frontend (pago_frontend.html)
+Debes actualizar la función procesarPago para que extraiga el valor del código postal del formulario y lo envíe al servidor.
+
+Busca la función procesarPago() y actualiza el objeto cliente en el body del fetch:
+
+JavaScript
+async function procesarPago() {
+    // ... (validaciones previas)
+    
+    const nombre = document.querySelector('input[placeholder="Nombre"]').value;
+    const email = document.querySelector('input[placeholder="Correo electrónico"]').value;
+    const direccion = document.querySelector('input[placeholder="Dirección"]').value;
+    const ciudad = document.querySelector('input[placeholder="Ciudad"]').value;
+    const pais = document.getElementById('pais-seleccion').value;
+    // CAPTURAMOS EL CÓDIGO POSTAL (Asegúrate de que el input tenga este placeholder o usa un ID)
+    const codigoPostal = document.querySelector('input[placeholder="Código Postal"]').value;
+
+    // ... 
+
+    const response = await fetch('http://localhost:3000/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            items: carrito,
+            cliente: {
+                nombre: nombre,
+                email: email,
+                direccion: direccion,
+                ciudad: ciudad,
+                pais: pais,
+                cp: codigoPostal,
+                ciudad: ciudad,
+                pais: pais
+                }
+            }),
+        });
+
+        const session = await response.json();
+
+        if (session.error) {
+            throw new Error(session.error);
+        }
+
+        // Sustituye 'TU_CLAVE_PUBLICA_STRIPE' por tu clave que empieza por pk_test_...
+        const stripe = Stripe(''); 
+        const result = await stripe.redirectToCheckout({
+            sessionId: session.id,
+        });
+
+        if (result.error) {
+            alert(result.error.message);
+        }
+
+    } catch (error) {
+        console.error("Error en el pago:", error);
+        alert("Hubo un error al conectar con la pasarela de pago. Asegúrate de que el servidor backend esté encendido.");
+    } finally {
+        btn.disabled = false;
+        btn.innerText = "CONFIRMAR Y PAGAR";
+    }
+}
     </script>
 </body>
 </html>
