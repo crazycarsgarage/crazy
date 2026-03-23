@@ -295,47 +295,48 @@
                     </div>
 
                     <div>
-                        <select id="pais-seleccion" class="input-gris" required onchange="actualizarPrecios()">
+                        <select id="pais" class="input-gris" required onchange="actualizarPrecios()">
                             <option value="" disabled selected>Selecciona tu país...</option>
-                            <option value="Alemania">Alemania</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Austria">Austria</option>
-                            <option value="Bélgica">Bélgica</option>
-                            <option value="Bolivia">Bolivia</option>
-                            <option value="Brasil">Brasil</option>
-                            <option value="Canadá">Canadá</option>
-                            <option value="Chile">Chile</option>
+                            <option value="EU">Alemania</option>
+                            <option value="Latam">Argentina</option>
+                            <option value="EU">Austria</option>
+                            <option value="EU">Bélgica</option>
+                            <option value="Latam">Bolivia</option>
+                            <option value="Latam">Brasil</option>
+                            <option value="NAmerica">Canadá</option>
+                            <option value="Latam">Chile</option>
                             <option value="Colombia">Colombia</option>
-                            <option value="Costa Rica">Costa Rica</option>
-                            <option value="Cuba">Cuba</option>
-                            <option value="Dinamarca">Dinamarca</option>
-                            <option value="Ecuador">Ecuador</option>
-                            <option value="El Salvador">El Salvador</option>
+                            <option value="Latam">Costa Rica</option>
+                            <option value="Latam">Cuba</option>
+                            <option value="EU">Dinamarca</option>
+                            <option value="Latam">Ecuador</option>
+                            <option value="Latam">El Salvador</option>
                             <option value="España">España</option>
-                            <option value="Estados Unidos">Estados Unidos</option>
-                            <option value="Finlandia">Finlandia</option>
-                            <option value="Francia">Francia</option>
-                            <option value="Grecia">Grecia</option>
-                            <option value="Groenlandia">Groenlandia</option>
-                            <option value="Guatemala">Guatemala</option>
-                            <option value="Haití">Haití</option>
-                            <option value="Honduras">Honduras</option>
-                            <option value="Irlanda">Irlanda</option>
-                            <option value="Italia">Italia</option>
-                            <option value="Luxemburgo">Luxemburgo</option>
-                            <option value="México">México</option>
-                            <option value="Nicaragua">Nicaragua</option>
-                            <option value="Países Bajos">Países Bajos</option>
-                            <option value="Panamá">Panamá</option>
-                            <option value="Paraguay">Paraguay</option>
-                            <option value="Perú">Perú</option>
-                            <option value="Portugal">Portugal</option>
-                            <option value="República Dominicana">República Dominicana</option>
-                            <option value="Rumanía">Rumanía</option>
-                            <option value="Suecia">Suecia</option>
-                            <option value="Reino Unido">Reino Unido</option>
-                            <option value="Uruguay">Uruguay</option>
-                            <option value="Venezuela">Venezuela</option>
+                            <option value="Islas">Islas/Ceuta/Melilla</option>
+                            <option value="NAmerica">Estados Unidos</option>
+                            <option value="EU">Finlandia</option>
+                            <option value="EU">Francia</option>
+                            <option value="EU">Grecia</option>
+                            <option value="NAmerica">Groenlandia</option>
+                            <option value="Latam">Guatemala</option>
+                            <option value="Latam">Haití</option>
+                            <option value="Latam">Honduras</option>
+                            <option value="EU">Irlanda</option>
+                            <option value="EU">Italia</option>
+                            <option value="EU">Luxemburgo</option>
+                            <option value="Latam">México</option>
+                            <option value="Latam">Nicaragua</option>
+                            <option value="EU">Países Bajos</option>
+                            <option value="Latam">Panamá</option>
+                            <option value="Latam">Paraguay</option>
+                            <option value="Latam">Perú</option>
+                            <option value="EU">Portugal</option>
+                            <option value="Latam">República Dominicana</option>
+                            <option value="EU">Rumanía</option>
+                            <option value="EU">Suecia</option>
+                            <option value="UK">Reino Unido</option>
+                            <option value="Latam">Uruguay</option>
+                            <option value="Latam">Venezuela</option>
                         </select>
                     </div>
 
@@ -776,21 +777,30 @@
         }
 
         function actualizarPrecios() {
-            const pais = document.getElementById('pais-seleccion').value;
+            const pais = document.getElementById('pais').value;
             const gastosE = document.getElementById('gastos-envio');
             const totalE = document.getElementById('total-pago');
             const textoEnvio = document.getElementById('texto-envio');
             let envio = 0;
 
             if (pais === "España") {
-                envio = 19.95;
-                textoEnvio.innerText = "Gastos de envío nacional (España): 19,95€ aplicados.";
-            } else if (pais === "Reino Unido") {
-                envio = 44.95;
-                textoEnvio.innerText = "Gastos de envío a Reino Unido: 44,95€ aplicados.";
-            } else if (pais !== "") {
-                envio = 39.95;
-                textoEnvio.innerText = `Gastos de envío a ${pais} (LATAM/UE): 39,95€ aplicados.`;
+                envio = 12.95;
+                textoEnvio.innerText = "Gastos de envío nacional (Peninsula): 12,95€ aplicados.";
+            } else if (pais === "Islas") {
+                envio = 18.95;
+                textoEnvio.innerText = "Gastos de envío a Canarias/Baleares/Ceuta/Melilla: 18,95€ aplicados.";
+            } else if (pais === "EU") {
+                envio = 28.95;
+                textoEnvio.innerText = "Gastos de envío a Europa (excepto España y UK): 28,95€ aplicados.";
+            } else if (pais === "UK") {
+                envio = 25.95;
+                textoEnvio.innerText = "Gastos de envío a Reino Unido: 25,95€ aplicados.";
+            } else if (pais === "Latam") {
+                envio = 46.95;
+                textoEnvio.innerText = `Gastos de envío a ${pais} : 46,95€ aplicados.`;
+            } else if (pais === "Latam") {
+                envio = 48.95;
+                textoEnvio.innerText = `Gastos de envío a ${pais} : 48,95€ aplicados.`;
             }
 
             gastosE.innerText = envio.toFixed(2) + '€';
