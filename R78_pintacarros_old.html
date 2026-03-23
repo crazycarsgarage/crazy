@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Cars Garage - Pasarela de Pago - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
+    <title>Crazy Cars Garage - PISTOLA HÍBRIDA NACSC R78 ROY PINTACARROS MTI ZAPHIRO BLUE 1.3 PRO - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
 
     <meta name="author" content="ciberbross90">
     <meta name="copyright" content="ciberbross90">
@@ -23,8 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <script src="https://js.stripe.com/v3/"></script>
-
     <style>
         :root {
             --crazy-turquoise: #000000; /* Fondo negro solicitado */
@@ -33,51 +31,54 @@
             --accent-turquoise: #40E0D0;
         }
 
-        body { background-color: var(--crazy-turquoise); font-family: 'Roboto', sans-serif; margin: 0; }
-        .font-crazy { font-family: 'Permanent Marker', cursive; }
-        
-        .nav-bar { background-color: var(--crazy-fuchsia); width: 100%; box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4); }
-        
-        .main-container {
-            background: white;
+        body {
+            background-color: var(--crazy-turquoise);
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .nav-item, .font-crazy {
+            font-family: 'Permanent Marker', cursive;
+        }
+
+	.neon-title {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px var(--crazy-fuchsia),
+                0 0 82px var(--crazy-fuchsia);
+        }
+
+        .nav-bar {
+            background-color: var(--crazy-fuchsia);
+            box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4);
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+        }
+
+        .product-card {
+            background: #fff;
             border: 4px solid var(--crazy-dark);
-            box-shadow: 10px 10px 0px var(--crazy-fuchsia);
+            box-shadow: 15px 15px 0px var(--crazy-dark);
         }
 
-        .input-gris {
-            background-color: #f3f4f6;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 10px;
-            width: 100%;
-            outline: none;
-        }
-        .input-gris:focus { border-color: var(--crazy-fuchsia); background-color: #fff; }
-        
-        .banner-envio {
-            background-color: #fffbeb;
-            border: 2px dashed #f59e0b;
-            color: #92400e;
-        }
-        /* CORRECCIÓN: Estilo para permitir el scroll en los modales */
-        .modal-content-scroll {
-            max-height: 70vh;
-            overflow-y: auto;
-            padding-right: 10px; /* Espacio para la barra si aparece */
+        .btn-crazy {
+            background-color: var(--crazy-fuchsia);
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px var(--crazy-dark);
         }
 
-        /* Estilo personalizado para la barra de scroll (opcional) */
-        .modal-content-scroll::-webkit-scrollbar {
-            width: 8px;
+        .btn-crazy:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--crazy-dark);
         }
-        .modal-content-scroll::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        .modal-content-scroll::-webkit-scrollbar-thumb {
-            background: var(--crazy-fuchsia);
-            border-radius: 10px;
-        }
+
         #cookieBanner {
             position: fixed;
             bottom: 0;
@@ -220,7 +221,6 @@
 <link rel="canonical" href="https://crazycarsgarage.github.io/crazycars/">
 
 </head>
-
 <body class="flex flex-col min-h-screen">
 
 <section class="relative w-full h-[25vh] md:h-[55vh] overflow-hidden">
@@ -244,117 +244,68 @@
         </div>
     </div>
 </nav>
-    <main class="container mx-auto px-4 py-12 max-w-5xl flex-grow">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            
-            <div class="space-y-6">
-                <div class="main-container rounded-3xl p-6 h-fit">
-                    <h2 class="text-2xl font-crazy mb-6 border-b-4 border-gray-100 pb-2">Resumen del Pedido</h2>
-                    <div id="resumen-productos" class="space-y-4"></div>
-                    
-                    <div id="banner-info-envio" class="banner-envio mt-6 p-4 rounded-xl text-sm font-bold flex items-center gap-3">
-                        <i class="fas fa-truck"></i>
-                        <span id="texto-envio">Selecciona un país para calcular envío</span>
-                    </div>
 
-                    <div class="mt-6 pt-4 border-t-2 border-gray-100 space-y-2">
-                        <div class="flex justify-between text-gray-600">
-                            <span>Subtotal:</span>
-                            <span id="subtotal">0.00€</span>
-                        </div>
-                        <div class="flex justify-between text-gray-600 border-b pb-2">
-                            <span>Gastos de envío:</span>
-                            <span id="gastos-envio">0.00€</span>
-                        </div>
-                        <div class="flex justify-between text-2xl font-bold">
-                            <span>TOTAL:</span>
-                            <span id="total-pago" class="text-[#FF00FF]">0.00€</span>
-                        </div>
-                    </div>
-                </div>
+<header class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl md:text-7xl neon-title mb-6">Pistola R78 Roy Pintacarros</h1>
+</header>
+
+<main class="container mx-auto px-4 py-12 max-w-6xl flex-grow">
+
+    <div class="product-card rounded-3xl overflow-hidden flex flex-col md:flex-row gap-8 p-6 md:p-10">
+        
+        <div class="w-full md:w-1/2 space-y-4">
+            <div class="aspect-square bg-white rounded-2xl overflow-hidden border-4 border-gray-100 shadow-inner">
+                <img src="roy_pintacarros.webp" alt="Pistola R78 Roy Pintacarros" class="w-full h-full object-contain p-4">
             </div>
-
-            <div class="main-container rounded-3xl p-6">
-                <h2 class="text-2xl font-crazy mb-6 border-b-4 border-gray-100 pb-2">Datos de Envío</h2>
-                <form id="form-pago" class="space-y-4">
-                    <div class="flex gap-4">
-                        <div style="width: 40%;">
-                        <input type="text" placeholder="Nombre" class="input-gris" required>
-                        </div>
-                        <div style="width: 60%;">
-                        <input type="text" placeholder="Apellidos" class="input-gris" required>
-			</div>
-                    </div>
-                    <input type="text" placeholder="Dirección completa" class="input-gris" required>
-                    
-                    <div class="flex gap-4">
-                        <div style="width: 70%;">
-                            <input type="text" placeholder="Ciudad" class="input-gris" required>
-                        </div>
-                        <div style="width: 30%;">
-                            <input type="text" placeholder="Codigo Postal" class="input-gris" required>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select id="pais" class="input-gris" required onchange="actualizarPrecios()">
-                            <option value="" disabled selected>Selecciona tu país...</option>
-                            <option value="Europa">Alemania</option>
-                            <option value="Latam">Argentina</option>
-                            <option value="Europa">Austria</option>
-                            <option value="Europa">Bélgica</option>
-                            <option value="Latam">Bolivia</option>
-                            <option value="Latam">Brasil</option>
-                            <option value="Norteamerica">Canadá</option>
-                            <option value="Latam">Chile</option>
-                            <option value="Latam">Colombia</option>
-                            <option value="Latam">Costa Rica</option>
-                            <option value="Latam">Cuba</option>
-                            <option value="Europa">Dinamarca</option>
-                            <option value="Latam">Ecuador</option>
-                            <option value="Latam">El Salvador</option>
-                            <option value="Peninsula">España</option>
-                            <option value="España Insular">España Islas</option>
-                            <option value="Norteamerica">Estados Unidos</option>
-                            <option value="Europa">Finlandia</option>
-                            <option value="Europa">Francia</option>
-                            <option value="Europa">Grecia</option>
-                            <option value="Norteamerica">Groenlandia</option>
-                            <option value="Latam">Guatemala</option>
-                            <option value="Latam">Haití</option>
-                            <option value="Latam">Honduras</option>
-                            <option value="Europa">Irlanda</option>
-                            <option value="Europa">Italia</option>
-                            <option value="Europa">Luxemburgo</option>
-                            <option value="Latam">México</option>
-                            <option value="Latam">Nicaragua</option>
-                            <option value="Europa">Países Bajos</option>
-                            <option value="Latam">Panamá</option>
-                            <option value="Latam">Paraguay</option>
-                            <option value="Latam">Perú</option>
-                            <option value="Europa">Portugal</option>
-                            <option value="UK">Reino Unido</option>
-                            <option value="Latam">República Dominicana</option>
-                            <option value="Europa">Rumanía</option>
-                            <option value="Europa">Suecia</option>
-                            <option value="Latam">Uruguay</option>
-                            <option value="Latam">Venezuela</option>
-                        </select>
-                    </div>
-
-                    <input type="email" placeholder="Email de contacto" class="input-gris" required>
-                    <input type="tel" placeholder="Teléfono" class="input-gris" required>
-                    
-		<button id="checkout-button" onclick="procesarPago()" class="w-full ...">
-		    CONFIRMAR Y PAGAR
-		</button>
-			<div class="flex justify-center w-full mt-4 mb-8">
-			<a href="carrito.html" class="inline-block bg-white text-[#FF00FF] px-4 py-2 rounded-full font-crazy  hover:bg-[#40E0D0] transition-colors text-xl"><i class="fas fa-arrow-left mr-2"></i> Volver</a>
-			</div>
-                </form>
+            <div class="grid grid-cols-4 gap-2">
+                <div class="aspect-square bg-gray-100 rounded-lg border-2 border-[#FF00FF] p-1"><img src="roy_pintacarros.webp" class="w-full h-full object-contain"></div>
+                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="roy_pintacarros1.webp" class="w-full h-full object-contain"></div>
+                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="roy_pintacarros2.webp" class="w-full h-full object-contain"></div>
+                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="roy_pintacarros3.webp" class="w-full h-full object-contain"></div>
             </div>
         </div>
-    </main>
+
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="text-3xl md:text-4xl font-crazy text-gray-900 mb-2">PISTOLA HÍBRIDA NACSC R78 ROY PINTACARROS MTI ZAPHIRO BLUE 1.3 PRO</h1>
+            <p class="text-gray-500 font-bold mb-4"><strong>Ref:</strong>CS08R78ZAFIRO</p>
+            
+            <div class="bg-gray-50 p-6 rounded-2xl border-l-8 border-[#FF00FF] mb-6">
+                <p class="text-[#FF00FF] font-black text-xl mb-2 italic underline"></p>
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-2xl text-gray-400 line-through italic">533,35 €</span>
+                    <span class="text-5xl font-crazy text-gray-900 italic">320,01 €</span>
+                </div>
+                <p class="text-red-600 font-black animate-pulse mb-4"></p>
+                <p class="text-sm leading-relaxed mb-4 font-medium uppercase italic"></p>
+                <p class="text-sm leading-relaxed mb-4">Pistola R78 generación híbrida. INCLUYE DEPOSITO DE GRAVEDAD.</p>
+                <p class="text-sm leading-relaxed mb-4 font-bold text-red-600 italic">NO INCLUYE MANÓMETRO. NO INCLUIDO COPLE PARA VASOS PPS NI PPS 2.0.</p>
+                <p class="text-[#FF00FF] font-crazy text-2xl mt-2 italic">NO TE QUEDES SIN LA TUYA!!</p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <button id="btn-agregar" class="btn-crazy text-white font-bold py-4 rounded-xl text-xl uppercase italic shadow-lg">Añadir al carrito</button>
+                <a href="carrito.html" class="bg-gray-200 text-gray-800 font-bold py-4 rounded-xl text-xl uppercase italic hover:bg-gray-300 transition-all border-b-4 border-gray-400 text-center block">Ver mi carrito</a>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-6 text-xs uppercase font-bold text-gray-400">
+                <a href="https://wa.me/34652748175" target="_blank" class="hover:text-[#FF00FF]"><i class="fab fa-whatsapp mr-2"></i>¿Necesitas ayuda?</a>
+		<a href="tienda.html" target="_blank" class="hover:text-[#FF00FF]"><i class="fas fa-chevron-left mr-2"></i>Volver a la tienda.</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-12 bg-white p-8 rounded-3xl border-4 border-gray-100 shadow-xl">
+        <h2 class="text-2xl font-crazy text-gray-900 mb-6 border-b-4 border-[#FF00FF] inline-block">Descripción del producto</h2>
+        <div class="text-gray-600 leading-relaxed space-y-4">
+            <p>El modelo R78 <strong>Roy pintacarros</strong> incorpora un sistema de doble válvula híbrida que permite trabajar la pintura base solvente - base agua y además incorpora una vía rápida de aire para aplicar barniz a una presión intermedia máxima de 2.8 BARS / 40 PSI.</p>
+            <p>Su boquilla MTI de media presión aplica el color y el barniz de forma homogénea , limpia y fina . Perfecta para la aplicación de colores metálicos. , perlados , sólidos y barnices tanto de media como alta carga solida HS o UHS.</p>
+            <p>La tecnología MTE Médium Transfer efficient es de última generación y solo se aplica en este modelo R78 construida exclusivamente para Roy pintacarros haciendo un aerografo versátil y eficiente para todo tipo de situaciones.</p>
+            <p>La R78 está construida en mono bloque sin juntas plásticas , lo que le confiere una gran duración de vida en el tiempo durante situaciones extremas.</p>
+            <p>Cuerpo de aluminio ALUPROX aligerado de alta calidad anodizado en azul zafiro ultra resistente.</p>
+            <p>CONSUMO DE AIRE ULTRA BAJO 140 LITROS POR MIN</p>
+        </div>
+    </div>
+</main>
 
 <footer class="bg-gray-900 text-white pt-10 pb-6 border-t-4 border-[#FF00FF]">
     <div class="container mx-auto px-4 max-w-6xl">
@@ -752,155 +703,39 @@
 </script>
 
 <script>
-    let subtotalGlobal = 0;
-    let carritoGlobal = [];
+    document.addEventListener('DOMContentLoaded', function() {
+        const boton = document.getElementById('btn-agregar');
 
-    function cargarCarrito() {
-        const resumen = document.getElementById('resumen-productos');
-        const subtotalE = document.getElementById('subtotal');
-        
-        carritoGlobal = JSON.parse(localStorage.getItem('crazy_cart')) || [];
-        
-        if (carritoGlobal.length === 0) { 
-            window.location.href = "carrito.html"; 
-            return; 
-        }
+        boton.addEventListener('click', function() {
+            const producto = {
+                id: 'CS08R78ZAFIRO',
+                nombre: 'R78 Roy Pintacarros',
+                precio: 320.01,
+                imagen: 'roy_pintacarros.webp',
+                cantidad: 1
+            };
 
-        let suma = 0;
-        resumen.innerHTML = '';
-        carritoGlobal.forEach(item => {
-            suma += item.precio * item.cantidad;
-            resumen.innerHTML += `
-                <div class="flex justify-between items-center text-sm border-b border-gray-50 pb-2">
-                    <div class="flex items-center gap-3">
-                        <img src="${item.imagen}" class="w-10 h-10 object-cover rounded">
-                        <span><span class="font-bold">${item.cantidad}x</span> ${item.nombre}</span>
-                    </div>
-                    <span class="font-bold">${(item.precio * item.cantidad).toFixed(2)}€</span>
-                </div>`;
-        });
-        
-        subtotalGlobal = suma;
-        subtotalE.innerText = suma.toFixed(2) + '€';
-        actualizarPrecios();
-    }
+            let carrito = JSON.parse(localStorage.getItem('crazy_cart')) || [];
+            const existe = carrito.findIndex(item => item.id === producto.id);
 
-function actualizarPrecios() {
-        const paisSelect = document.getElementById('pais');
-        const gastosE = document.getElementById('gastos-envio');
-        const totalE = document.getElementById('total-pago');
-        const textoEnvio = document.getElementById('texto-envio');
-        let envio = 0;
-
-        const pais = paisSelect.value;
-
-        if (pais === "Peninsula") {
-            envio = 0.00;
-            textoEnvio.innerText = "Gastos de envío nacional: ¡GRATIS! (España peninsular).";
-        } else if (pais === "España Insular") {
-            envio = 11.95;
-            textoEnvio.innerText = "Gastos de envío a Canarias/Baleares/Ceuta/Melilla: 11,95€.";
-        } else if (pais === "UK") {
-            envio = 41.95;
-            textoEnvio.innerText = "Gastos de envío a Reino Unido: 41,95€.";
-        } else if (pais === "Latam") {
-            envio = 39.95;
-            textoEnvio.innerText = "Gastos de envío a LATAM: 39,95€.";
-        } else if (pais === "Norteamerica") {
-            envio = 44.95;
-            textoEnvio.innerText = "Gastos de envío a Norteamérica: 44,95€.";
-        } else if (pais === "Europa") {
-            envio = 34.95;
-            textoEnvio.innerText = "Gastos de envío a Europa (UE): 34,95€.";
-        }
-
-        gastosE.innerText = envio.toFixed(2) + '€';
-        totalE.innerText = (subtotalGlobal + envio).toFixed(2) + '€';
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        cargarCarrito();
-        
-        const selectorPais = document.getElementById('pais');
-        if (selectorPais) {
-            selectorPais.addEventListener('change', actualizarPrecios);
-        }
-
-        const formulario = document.getElementById('form-pago');
-        if (formulario) {
-            formulario.addEventListener('submit', (e) => {
-                e.preventDefault();
-                procesarPago();
-            });
-        }
-    });	
-
-    document.addEventListener('DOMContentLoaded', () => {
-        cargarCarrito();
-        document.getElementById('pais').addEventListener('change', actualizarPrecios);
-    });
-
-    async function procesarPago() {
-        const btn = document.getElementById('btn-pagar');
-        btn.disabled = true;
-        btn.innerText = 'Procesando...';
-
-        try {
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const direccion = document.getElementById('direccion').value;
-            const ciudad = document.getElementById('ciudad').value;
-            const pais = document.getElementById('pais').value;
-            const codigoPostal = document.getElementById('codigoPostal').value;
-            const envioTexto = document.getElementById('gastos-envio').innerText;
-            const envioPrecio = parseFloat(envioTexto.replace('€', ''));
-
-            if (!email || !direccion) {
-                alert("Por favor, rellena los campos obligatorios.");
-                return;
+            if (existe !== -1) {
+                carrito[existe].cantidad += 1;
+            } else {
+                carrito.push(producto);
             }
 
-            const response = await fetch('http://localhost:3000/create-checkout-session', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    items: carritoGlobal,
-                    cliente: {
-                        nombre: nombre,
-                        email: email,
-                        direccion: direccion,
-                        ciudad: ciudad,
-                        pais: pais,
-                        cp: codigoPostal
-                    },
-                    envioPrecio: envioPrecio
-                }),
-            });
+            localStorage.setItem('crazy_cart', JSON.stringify(carrito));
 
-            const session = await response.json();
-
-            if (session.error) throw new Error(session.error);
-
-            const stripe = Stripe('pk_test_51TDlZm1sVmG3VIdbYEheeIhhiziXcITvVJwbVXJ5OeoyhPUvmXwAvb4TXRy4zuoEYU0F8d3ACJEP8Ibft9OymhPp00YuiRileo'); 
-            const result = await stripe.redirectToCheckout({
-                sessionId: session.id,
-            });
-
-            if (result.error) alert(result.error.message);
-
-        } catch (error) {
-            console.error("Error en el pago:", error);
-            alert("Hubo un error al conectar con la pasarela. Asegúrate de que el servidor (Node.js) esté encendido.");
-        } finally {
-            btn.disabled = false;
-            btn.innerText = 'CONFIRMAR Y PAGAR';
-        }
-    }
-
-    // Prevenir el envío normal del formulario y llamar a nuestra función
-    document.getElementById('form-pago').addEventListener('submit', (e) => {
-        e.preventDefault();
-        procesarPago();
+            this.innerHTML = '<i class="fas fa-check mr-2"></i>Añadido!';
+            this.classList.remove('btn-crazy');
+            this.classList.add('bg-green-500', 'text-white');
+            
+            setTimeout(() => {
+                this.innerHTML = 'Añadir al carrito';
+                this.classList.remove('bg-green-500', 'text-white');
+                this.classList.add('btn-crazy');
+            }, 2000);
+        });
     });
 </script>
 
