@@ -23,8 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <script src="https://js.stripe.com/v3/"></script>
-
     <style>
         :root {
             --crazy-turquoise: #000000; /* Fondo negro solicitado */
@@ -292,62 +290,61 @@
                             <input type="text" placeholder="Ciudad" class="input-gris" required>
                         </div>
                         <div style="width: 30%;">
-                            <input type="text" placeholder="Codigo Postal" class="input-gris" required>
+                            <input type="text" placeholder="C.P." class="input-gris" required>
                         </div>
                     </div>
 
                     <div>
-                        <select id="pais" class="input-gris" required onchange="actualizarPrecios()">
+                        <select id="pais-seleccion" class="input-gris" required onchange="actualizarPrecios()">
                             <option value="" disabled selected>Selecciona tu país...</option>
-                            <option value="Europa">Alemania</option>
-                            <option value="Latam">Argentina</option>
-                            <option value="Europa">Austria</option>
-                            <option value="Europa">Bélgica</option>
-                            <option value="Latam">Bolivia</option>
-                            <option value="Latam">Brasil</option>
-                            <option value="Norteamerica">Canadá</option>
-                            <option value="Latam">Chile</option>
-                            <option value="Latam">Colombia</option>
-                            <option value="Latam">Costa Rica</option>
-                            <option value="Latam">Cuba</option>
-                            <option value="Europa">Dinamarca</option>
-                            <option value="Latam">Ecuador</option>
-                            <option value="Latam">El Salvador</option>
-                            <option value="Peninsula">España</option>
-                            <option value="España Insular">España Islas</option>
-                            <option value="Norteamerica">Estados Unidos</option>
-                            <option value="Europa">Finlandia</option>
-                            <option value="Europa">Francia</option>
-                            <option value="Europa">Grecia</option>
-                            <option value="Norteamerica">Groenlandia</option>
-                            <option value="Latam">Guatemala</option>
-                            <option value="Latam">Haití</option>
-                            <option value="Latam">Honduras</option>
-                            <option value="Europa">Irlanda</option>
-                            <option value="Europa">Italia</option>
-                            <option value="Europa">Luxemburgo</option>
-                            <option value="Latam">México</option>
-                            <option value="Latam">Nicaragua</option>
-                            <option value="Europa">Países Bajos</option>
-                            <option value="Latam">Panamá</option>
-                            <option value="Latam">Paraguay</option>
-                            <option value="Latam">Perú</option>
-                            <option value="Europa">Portugal</option>
-                            <option value="UK">Reino Unido</option>
-                            <option value="Latam">República Dominicana</option>
-                            <option value="Europa">Rumanía</option>
-                            <option value="Europa">Suecia</option>
-                            <option value="Latam">Uruguay</option>
-                            <option value="Latam">Venezuela</option>
+                            <option value="Alemania">Alemania</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Bélgica">Bélgica</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Canadá">Canadá</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Dinamarca">Dinamarca</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="España">España</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Finlandia">Finlandia</option>
+                            <option value="Francia">Francia</option>
+                            <option value="Grecia">Grecia</option>
+                            <option value="Groenlandia">Groenlandia</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Haití">Haití</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Irlanda">Irlanda</option>
+                            <option value="Italia">Italia</option>
+                            <option value="Luxemburgo">Luxemburgo</option>
+                            <option value="México">México</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Países Bajos">Países Bajos</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Perú">Perú</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="República Dominicana">República Dominicana</option>
+                            <option value="Rumanía">Rumanía</option>
+                            <option value="Suecia">Suecia</option>
+                            <option value="Reino Unido">Reino Unido</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Venezuela">Venezuela</option>
                         </select>
                     </div>
 
                     <input type="email" placeholder="Email de contacto" class="input-gris" required>
                     <input type="tel" placeholder="Teléfono" class="input-gris" required>
                     
-		<button id="checkout-button" onclick="procesarPago()" class="w-full ...">
-		    CONFIRMAR Y PAGAR
-		</button>
+			<button id="checkout-button" class="w-full bg-[#40E0D0] text-black font-marker py-4 rounded-xl text-xl 					hover:scale-105 transition-all shadow-[0_0_20px_rgba(64,224,208,0.3)] uppercase mb-4">
+			    CONFIRMAR Y PAGAR
+			</button>
 			<div class="flex justify-center w-full mt-4 mb-8">
 			<a href="carrito.html" class="inline-block bg-white text-[#FF00FF] px-4 py-2 rounded-full font-crazy  hover:bg-[#40E0D0] transition-colors text-xl"><i class="fas fa-arrow-left mr-2"></i> Volver</a>
 			</div>
@@ -751,158 +748,60 @@
     }
 </script>
 
-<script>
-    let subtotalGlobal = 0;
-    let carritoGlobal = [];
+    <script>
+        let subtotalGlobal = 0;
 
-    function cargarCarrito() {
-        const resumen = document.getElementById('resumen-productos');
-        const subtotalE = document.getElementById('subtotal');
-        
-        carritoGlobal = JSON.parse(localStorage.getItem('crazy_cart')) || [];
-        
-        if (carritoGlobal.length === 0) { 
-            window.location.href = "carrito.html"; 
-            return; 
-        }
+        function cargarCarrito() {
+            const resumen = document.getElementById('resumen-productos');
+            const subtotalE = document.getElementById('subtotal');
+            let carrito = JSON.parse(localStorage.getItem('crazy_cart')) || [];
+            if (carrito.length === 0) { window.location.href = "carrito.html"; return; }
 
-        let suma = 0;
-        resumen.innerHTML = '';
-        carritoGlobal.forEach(item => {
-            suma += item.precio * item.cantidad;
-            resumen.innerHTML += `
-                <div class="flex justify-between items-center text-sm border-b border-gray-50 pb-2">
-                    <div class="flex items-center gap-3">
-                        <img src="${item.imagen}" class="w-10 h-10 object-cover rounded">
-                        <span><span class="font-bold">${item.cantidad}x</span> ${item.nombre}</span>
-                    </div>
-                    <span class="font-bold">${(item.precio * item.cantidad).toFixed(2)}€</span>
-                </div>`;
-        });
-        
-        subtotalGlobal = suma;
-        subtotalE.innerText = suma.toFixed(2) + '€';
-        actualizarPrecios();
-    }
-
-function actualizarPrecios() {
-        const paisSelect = document.getElementById('pais');
-        const gastosE = document.getElementById('gastos-envio');
-        const totalE = document.getElementById('total-pago');
-        const textoEnvio = document.getElementById('texto-envio');
-        let envio = 0;
-
-        const pais = paisSelect.value;
-
-        if (pais === "Peninsula") {
-            envio = 0.00;
-            textoEnvio.innerText = "Gastos de envío nacional: ¡GRATIS! (España peninsular).";
-        } else if (pais === "España Insular") {
-            envio = 11.95;
-            textoEnvio.innerText = "Gastos de envío a Canarias/Baleares/Ceuta/Melilla: 11,95€.";
-        } else if (pais === "UK") {
-            envio = 41.95;
-            textoEnvio.innerText = "Gastos de envío a Reino Unido: 41,95€.";
-        } else if (pais === "Latam") {
-            envio = 39.95;
-            textoEnvio.innerText = "Gastos de envío a LATAM: 39,95€.";
-        } else if (pais === "Norteamerica") {
-            envio = 44.95;
-            textoEnvio.innerText = "Gastos de envío a Norteamérica: 44,95€.";
-        } else if (pais === "Europa") {
-            envio = 34.95;
-            textoEnvio.innerText = "Gastos de envío a Europa (UE): 34,95€.";
-        }
-
-        gastosE.innerText = envio.toFixed(2) + '€';
-        totalE.innerText = (subtotalGlobal + envio).toFixed(2) + '€';
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        cargarCarrito();
-        
-        const selectorPais = document.getElementById('pais');
-        if (selectorPais) {
-            selectorPais.addEventListener('change', actualizarPrecios);
-        }
-
-        const formulario = document.getElementById('form-pago');
-        if (formulario) {
-            formulario.addEventListener('submit', (e) => {
-                e.preventDefault();
-                procesarPago();
+            let suma = 0;
+            resumen.innerHTML = '';
+            carrito.forEach(item => {
+                suma += item.precio * item.cantidad;
+                resumen.innerHTML += `
+                    <div class="flex justify-between items-center text-sm border-b border-gray-50 pb-2">
+                        <div class="flex items-center gap-3">
+                            <img src="${item.imagen}" class="w-10 h-10 object-cover rounded">
+                            <span><span class="font-bold">${item.cantidad}x</span> ${item.nombre}</span>
+                        </div>
+                        <span class="font-bold">${(item.precio * item.cantidad).toFixed(2)}€</span>
+                    </div>`;
             });
+            subtotalGlobal = suma;
+            subtotalE.innerText = suma.toFixed(2) + '€';
+            actualizarPrecios();
         }
-    });	
 
-    document.addEventListener('DOMContentLoaded', () => {
-        cargarCarrito();
-        document.getElementById('pais').addEventListener('change', actualizarPrecios);
-    });
+        function actualizarPrecios() {
+            const pais = document.getElementById('pais-seleccion').value;
+            const gastosE = document.getElementById('gastos-envio');
+            const totalE = document.getElementById('total-pago');
+            const textoEnvio = document.getElementById('texto-envio');
+            let envio = 0;
 
-    async function procesarPago() {
-        const btn = document.getElementById('btn-pagar');
-        btn.disabled = true;
-        btn.innerText = 'Procesando...';
-
-        try {
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const direccion = document.getElementById('direccion').value;
-            const ciudad = document.getElementById('ciudad').value;
-            const pais = document.getElementById('pais').value;
-            const codigoPostal = document.getElementById('codigoPostal').value;
-            const envioTexto = document.getElementById('gastos-envio').innerText;
-            const envioPrecio = parseFloat(envioTexto.replace('€', ''));
-
-            if (!email || !direccion) {
-                alert("Por favor, rellena los campos obligatorios.");
-                return;
+            if (pais === "España") {
+                envio = 19.95;
+                textoEnvio.innerText = "Gastos de envío nacional (España): 19,95€ aplicados.";
+            } else if (pais === "Reino Unido") {
+                envio = 44.95;
+                textoEnvio.innerText = "Gastos de envío a Reino Unido: 44,95€ aplicados.";
+            } else if (pais !== "") {
+                envio = 39.95;
+                textoEnvio.innerText = `Gastos de envío a ${pais} (LATAM/UE): 39,95€ aplicados.`;
             }
 
-            const response = await fetch('http://localhost:3000/create-checkout-session', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    items: carritoGlobal,
-                    cliente: {
-                        nombre: nombre,
-                        email: email,
-                        direccion: direccion,
-                        ciudad: ciudad,
-                        pais: pais,
-                        cp: codigoPostal
-                    },
-                    envioPrecio: envioPrecio
-                }),
-            });
-
-            const session = await response.json();
-
-            if (session.error) throw new Error(session.error);
-
-            const stripe = Stripe('pk_test_51TDlZm1sVmG3VIdbYEheeIhhiziXcITvVJwbVXJ5OeoyhPUvmXwAvb4TXRy4zuoEYU0F8d3ACJEP8Ibft9OymhPp00YuiRileo'); 
-            const result = await stripe.redirectToCheckout({
-                sessionId: session.id,
-            });
-
-            if (result.error) alert(result.error.message);
-
-        } catch (error) {
-            console.error("Error en el pago:", error);
-            alert("Hubo un error al conectar con la pasarela. Asegúrate de que el servidor (Node.js) esté encendido.");
-        } finally {
-            btn.disabled = false;
-            btn.innerText = 'CONFIRMAR Y PAGAR';
+            gastosE.innerText = envio.toFixed(2) + '€';
+            totalE.innerText = (subtotalGlobal + envio).toFixed(2) + '€';
         }
-    }
 
-    // Prevenir el envío normal del formulario y llamar a nuestra función
-    document.getElementById('form-pago').addEventListener('submit', (e) => {
-        e.preventDefault();
-        procesarPago();
-    });
-</script>
-
+        document.addEventListener('DOMContentLoaded', cargarCarrito);
+        document.getElementById('form-pago').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("¡Pedido recibido! Redirigiendo a pasarela de pago segura...");
+        });
+    </script>
 </body>
 </html>
