@@ -673,22 +673,35 @@
         const banner = document.getElementById('cookie-law-banner');
         if (banner) {
             banner.style.display = 'none';
-            // Guardamos la elección para que no salga más
-            localStorage.setItem('crazy_cookies_accepted', 'true');
-            console.log("Cookies " + choice);
+            try {
+                // Guardamos la elección. Usamos try-catch por si Safari 
+                // tiene el modo navegación privada restrictivo.
+                localStorage.setItem('crazy_cookies_accepted', 'true');
+            } catch (e) {
+                console.log("No se pudo guardar en localStorage:", e);
+            }
         }
         document.body.style.overflow = 'auto';
     }
 
-    // Comprobar al cargar la página si ya aceptó
-    window.onload = function() {
-        const alreadyAccepted = localStorage.getItem('crazy_cookies_accepted');
+    // Función que comprueba el estado del banner
+    function checkCookieStatus() {
         const banner = document.getElementById('cookie-law-banner');
-        
-        if (alreadyAccepted === 'true' && banner) {
-            banner.style.display = 'none';
+        try {
+            const alreadyAccepted = localStorage.getItem('crazy_cookies_accepted');
+            if (alreadyAccepted === 'true' && banner) {
+                banner.style.display = 'none';
+            }
+        } catch (e) {
+            // Si falla el acceso a localStorage, al menos permitimos ver la web
+            console.log("Error al leer localStorage");
         }
-    };
+    }
+
+    // Ejecutamos la comprobación inmediatamente y también cuando el DOM esté listo
+    // Esto soluciona el retraso en Safari
+    checkCookieStatus();
+    document.addEventListener('DOMContentLoaded', checkCookieStatus);
 
     // Función para los otros modales (Aviso legal, etc)
     function toggleModal(id) {
