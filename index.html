@@ -650,7 +650,7 @@
     <div class="max-w-4xl mx-auto bg-black border border-[#40E0D0]/30 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.9)] p-6 backdrop-blur-md">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="text-center md:text-left">
-                <h3 class="text-[#40E0D0] font-marker text-xl mb-1">¿UNAS COOKIES, CRAZY?</h3>
+                <h3 class="text-[#40E0D0] font-marker text-xl mb-1">¿UNAS CRAZY COOKIES?</h3>
                 <p class="text-gray-300 text-xs md:text-sm leading-relaxed">
                     Usamos cookies para mejorar tu experiencia. Al aceptar, nos ayudas a optimizar la web. Si rechazas, solo usaremos las técnicas necesarias.
                 </p>
@@ -668,24 +668,29 @@
 </div>
 
 <script>
-    function saveCookieChoice() {
+    // Función para manejar la respuesta del usuario
+    function handleCookies(choice) {
         const banner = document.getElementById('cookie-law-banner');
         if (banner) {
             banner.style.display = 'none';
-            // Guardamos en el navegador que ya se aceptó
+            // Guardamos la elección para que no salga más
             localStorage.setItem('crazy_cookies_accepted', 'true');
+            console.log("Cookies " + choice);
         }
+        document.body.style.overflow = 'auto';
     }
 
-    (function checkCookies() {
+    // Comprobar al cargar la página si ya aceptó
+    window.onload = function() {
         const alreadyAccepted = localStorage.getItem('crazy_cookies_accepted');
         const banner = document.getElementById('cookie-law-banner');
         
         if (alreadyAccepted === 'true' && banner) {
             banner.style.display = 'none';
         }
-    })();
+    };
 
+    // Función para los otros modales (Aviso legal, etc)
     function toggleModal(id) {
         const modal = document.getElementById(id);
         if (modal) {
@@ -698,7 +703,6 @@
         }
     }
 </script>
-
 
 </body>
 </html>
