@@ -312,7 +312,6 @@
                             <option value="Latam">Ecuador</option>
                             <option value="Latam">El Salvador</option>
                             <option value="España">España</option>
-                            <option value="Islas">Islas/Ceuta/Melilla</option>
                             <option value="NAmerica">Estados Unidos</option>
                             <option value="EU">Finlandia</option>
                             <option value="EU">Francia</option>
@@ -776,36 +775,45 @@
             actualizarPrecios();
         }
 
-        function actualizarPrecios() {
-            const pais = document.getElementById('pais').value;
-            const gastosE = document.getElementById('gastos-envio');
-            const totalE = document.getElementById('total-pago');
-            const textoEnvio = document.getElementById('texto-envio');
-            let envio = 0;
+function actualizarPrecios() {
+    const selector = document.getElementById('pais');
+    const pais = selector.value;
+    const nombrePais = selector.options[selector.selectedIndex].text;
+    
+    const gastosE = document.getElementById('gastos-envio');
+    const totalE = document.getElementById('total-pago');
+    const textoEnvio = document.getElementById('texto-envio');
+    
+    let envio = 0;
 
-            if (pais === "España") {
-                envio = 12.95;
-                textoEnvio.innerText = "Gastos de envío nacional (Peninsula): 12,95€ aplicados.";
-            } else if (pais === "Islas") {
-                envio = 18.95;
-                textoEnvio.innerText = "Gastos de envío a Canarias/Baleares/Ceuta/Melilla: 18,95€ aplicados.";
-            } else if (pais === "EU") {
-                envio = 28.95;
-                textoEnvio.innerText = "Gastos de envío a Europa (excepto España y UK): 28,95€ aplicados.";
-            } else if (pais === "UK") {
-                envio = 25.95;
-                textoEnvio.innerText = "Gastos de envío a Reino Unido: 25,95€ aplicados.";
-            } else if (pais === "Latam") {
-                envio = 46.95;
-                textoEnvio.innerText = `Gastos de envío a ${pais} : 46,95€ aplicados.`;
-            } else if (pais === "Latam") {
-                envio = 48.95;
-                textoEnvio.innerText = `Gastos de envío a ${pais} : 48,95€ aplicados.`;
-            }
-
-            gastosE.innerText = envio.toFixed(2) + '€';
-            totalE.innerText = (subtotalGlobal + envio).toFixed(2) + '€';
+    if (pais === "España") {
+        if (subtotalGlobal >= 50) {
+            envio = 0;
+            textoEnvio.innerText = "¡Envío gratuito aplicado por pedido superior a 50€!";
+        } else {
+            envio = 12.95;
+            textoEnvio.innerText = "Gastos de envío nacional: 12,95€ (Gratis en pedidos +50€)";
         }
+    } else if (pais === "EU") {
+        envio = 28.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 28,95€ aplicados.`;
+    } else if (pais === "UK") {
+        envio = 25.95;
+        textoEnvio.innerText = "Gastos de envío a Reino Unido: 25,95€ aplicados.";
+    } else if (pais === "Latam") {
+        envio = 46.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 46,95€ aplicados.`;
+    } else if (pais === "NAmerica") {
+        envio = 48.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 48,95€ aplicados.`;
+    } else {
+        envio = 0;
+        textoEnvio.innerText = "Selecciona un país para calcular envío";
+    }
+
+    gastosE.innerText = envio.toFixed(2) + '€';
+    totalE.innerText = (subtotalGlobal + envio).toFixed(2) + '€';
+}
 
         document.addEventListener('DOMContentLoaded', cargarCarrito);
         document.getElementById('form-pago').addEventListener('submit', (e) => {
