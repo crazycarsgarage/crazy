@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Cars Garage - Tienda de venta - Crazy Business | Tienda de Herramientas de Pintura Distribuidor Norber Alonso y Taller de Chapa y Pintura</title>
+    <title>Crazy Cars Garage - Pistola R25 NA CSC Hibrida Smiley - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
 
     <meta name="author" content="ciberbross90">
     <meta name="copyright" content="ciberbross90">
 
     <meta name="description" content="Distribuidor oficial de pistolas de pintura NA y Norber Alonso. Especialistas en chapa y pintura con envío a toda España y Europa. Taller experto en chapa, pintura automotriz de alta gama, lunas y cristales en Serranillos del Valle. Distribuidor oficial de pistolas de pintura NA y Norber Alonso. ¡Calidad Crazy Business!">
     <meta name="keywords" content="pistolas pintura NA, Norber Alonso, herramientas pintura automotriz Europa, taller chapa y pintura Madrid, Crazy Cars Garage shop, taller chapa y pintura serranillos del valle, taller chapa y pintura griñon, taller chapa y pintura humanes de madrid, taller chapa y pintura cubas de la sagra, taller chapa y pintura carranque, lunas coche, pistolas pintura NA, pistolas pintura Norber Alonso, pistolas pintura envio a España, pistolas pintura envio a Europa, Crazy Cars Garage, Crazy Bussiness">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">,
     
     <meta property="og:title" content="Crazy Cars Garage - Expertos en Chapa y Pintura - Crazy Business">
     <meta property="og:description" content="Especialistas en chapa, carrocería, pintura de alta gama, gestion de lunas y cristales, y distribución oficial de herramientas de pintura profesional.">
@@ -42,9 +42,14 @@
             font-family: 'Permanent Marker', cursive;
         }
 
-        .neon-title {
+	.neon-title {
             color: #fff;
-            text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px var(--crazy-fuchsia), 0 0 82px var(--crazy-fuchsia);
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px var(--crazy-fuchsia),
+                0 0 82px var(--crazy-fuchsia);
         }
 
         .nav-bar {
@@ -58,62 +63,22 @@
         }
 
         .product-card {
-            background: white;
-            border-radius: 1.5rem;
-            border: 3px solid var(--crazy-dark);
-            box-shadow: 10px 10px 0px var(--crazy-dark);
-            overflow: hidden;
-            transition: transform 0.3s ease;
+            background: #fff;
+            border: 4px solid var(--crazy-dark);
+            box-shadow: 15px 15px 0px var(--crazy-dark);
         }
 
-        .product-card:hover {
-            transform: translateY(-10px);
+        .btn-crazy {
+            background-color: var(--crazy-fuchsia);
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px var(--crazy-dark);
         }
 
-        .price-tag {
-            background-color: #000;
-            color: var(--crazy-turquoise);
-            font-family: 'Permanent Marker';
-            padding: 8px 20px;
-            transform: rotate(-2deg);
-            display: inline-block;
-            box-shadow: 4px 4px 0px var(--crazy-fuchsia);
+        .btn-crazy:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--crazy-dark);
         }
 
-        .badge-norber {
-            background: var(--crazy-dark);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        
-        .product-link {
-            display: block;
-            cursor: pointer;
-        }
-
-        /* CORRECCIÓN: Estilo para permitir el scroll en los modales */
-        .modal-content-scroll {
-            max-height: 70vh;
-            overflow-y: auto;
-            padding-right: 10px; /* Espacio para la barra si aparece */
-        }
-
-        /* Estilo personalizado para la barra de scroll (opcional) */
-        .modal-content-scroll::-webkit-scrollbar {
-            width: 8px;
-        }
-        .modal-content-scroll::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        .modal-content-scroll::-webkit-scrollbar-thumb {
-            background: var(--crazy-fuchsia);
-            border-radius: 10px;
-        }
         #cookieBanner {
             position: fixed;
             bottom: 0;
@@ -234,13 +199,27 @@
         "availability": "https://schema.org/InStock",
         "areaServed": ["ES", "EU"]
       }
+    {
+      "@type": "Product",
+      "name": "Manometro Volumetrico NA COMPACT",
+      "image": "https://crazycarsgarage.github.io/crazycars/manometro_NA_compact.webp",
+      "description": "Manometro Volumetrico Norber Alonso de calidad.",
+      "brand": { "@type": "Brand", "name": "NA" },
+      "sku": "Manometro_compact",
+      "offers": {
+        "@type": "Offer",
+        "price": "29.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "areaServed": ["ES", "EU"]
+      }
     }
   ]
 }
 </script>
 
 <link rel="canonical" href="https://crazycarsgarage.github.io/crazycars/">
-
+	
 </head>
 
 <body class="flex flex-col min-h-screen">
@@ -250,15 +229,17 @@
     <img src="crazy art.webp" class="absolute top-0 right-0 h-full w-auto object-cover z-10" alt="Arte Crazy Cars Garage">
 </section>
 
+</div>
+
 <nav class="nav-bar text-white sticky top-0 z-50">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="flex flex-col md:flex-row justify-center md:justify-between items-center py-3">
-            <a href="index.html" class="text-2xl font-bold hidden md:block font-crazy">CRAZY BUSINESS S.L.</a>
+            <h2><a href="index.html" class="text-2xl font-bold hidden md:block font-crazy">CRAZY BUSINESS S.L.</a></h2>
             <ul class="flex flex-wrap justify-center gap-4 text-sm md:text-lg uppercase font-crazy">
                 <li><a href="index.html" class="nav-link px-3 py-2 block text-white"><i class="fas fa-home"></i></a></li>
                 <li><a href="historia.html" class="nav-link px-3 py-2 block">Quienes somos</a></li>
-                <li><a href="autos-locos.html" class="nav-link px-3 py-2 block">Autos Locos</a></li>
-                <li><a href="servicios.html" class="nav-link px-3 py-2 block">Servicios</a></li>
+                <li><a href="autos_locos.html" class="nav-link px-3 py-2 block">Autos Locos</a></li>
+                <li><a href="chapa_pintura_lunas_serranillos_del_valle.html" class="nav-link px-3 py-2 block">Servicios</a></li>
                 <li><a href="podcast.html" class="nav-link px-3 py-2 block">Podcast</a></li>
                 <li><a href="tienda.html" class="nav-link px-3 py-2 block">Tienda</a></li>
                 <li><a href="carrito.html" class="nav-link px-3 py-2 block"><i class="fas fa-shopping-cart"></i></a></li>
@@ -267,196 +248,66 @@
     </div>
 </nav>
 
-<main class="flex-grow container mx-auto px-4 py-12 max-w-6xl">
-    
-    <div class="text-center mb-16">
-        <span class="badge-norber">Distribuidor Oficial Autorizado</span>
-        <h1 class="text-5xl md:text-8xl neon-title uppercase tracking-tighter mt-4">NORBER ALONSO</h1>
-        <p class="text-white text-xl md:text-2xl mt-4 font-bold uppercase" style="text-shadow: 2px 2px var(--crazy-dark)">Pistolas Profesionales de Pintura</p>
+<header class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl md:text-7xl neon-title mb-6">Pistola R25 FIRE PRO 1.3.</h1>
+</header>
+
+<main class="container mx-auto px-4 py-12 max-w-6xl flex-grow">
+
+    <div class="product-card rounded-3xl overflow-hidden flex flex-col md:flex-row gap-8 p-6 md:p-10">
+        
+        <div class="w-full md:w-1/2 space-y-4">
+            <div class="aspect-square bg-white rounded-2xl overflow-hidden border-4 border-gray-100 shadow-inner">
+                <img src="fire_pro_r25.webp" alt="Pistola NA R25 PRO Hibrida FIRE 1.3" class="w-full h-full object-contain p-4">
+            </div>
+            <div class="grid grid-cols-4 gap-2">
+                <div class="aspect-square bg-gray-100 rounded-lg border-2 border-[#FF00FF] p-1"><img src="fire_pro_r25.webp" class="w-full h-full object-contain"></div>
+                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="fire_pro_r25_1.webp" class="w-full h-full object-contain"></div>
+                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="fire_pro_r25_2.webp" class="w-full h-full object-contain"></div>
+                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="fire_pro_r25_3.webp" class="w-full h-full object-contain"></div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="text-3xl md:text-4xl font-crazy text-gray-900 mb-2">PREVENTA!!! Pistola NA R25 PRO Hibrida FIRE 1.3</h1>
+            <p class="text-gray-500 font-bold mb-4"><strong>Ref:</strong>CS08R25DSR13</p>
+            
+            <div class="bg-gray-50 p-6 rounded-2xl border-l-8 border-[#FF00FF] mb-6">
+                <p class="text-[#FF00FF] font-black text-xl mb-2 italic underline">DISPONIBLE APROX. 2 DE ABRIL</p>
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-2xl text-gray-400 line-through italic">533,35 €</span>
+                    <span class="text-5xl font-crazy text-gray-900 italic">320,01 €</span>
+                </div>
+                <p class="text-red-600 font-black animate-pulse mb-4">Pistola R25 PRO Hibrida FIRE 1.3.</p>
+                <p class="text-sm leading-relaxed mb-4 font-medium uppercase italic">INCLUYE DEPOSITO DE GRAVEDAD.</p>
+                <p class="text-sm leading-relaxed mb-4">NO INCLUYE MANOMETRO . NO INCLUIDO COPLE PARA VASOS PPS NI PPS 2.0</p>
+                <p class="text-sm leading-relaxed mb-4 font-bold text-red-600 italic">CÓMPRALA EN PREVENTA!!! DISPONIBILIDAD APROX. 2 DE ABRIL</p>
+                <p class="text-[#FF00FF] font-crazy text-2xl mt-2 italic">NO TE QUEDES SIN LA TUYA!!</p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <button id="btn-agregar" class="btn-crazy text-white font-bold py-4 rounded-xl text-xl uppercase italic shadow-lg">Añadir al carrito</button>
+                <a href="carrito.html" class="bg-gray-200 text-gray-800 font-bold py-4 rounded-xl text-xl uppercase italic hover:bg-gray-300 transition-all border-b-4 border-gray-400 text-center block">Ver mi carrito</a>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-6 text-xs uppercase font-bold text-gray-400">
+                <a href="https://wa.me/34652748175" target="_blank" class="hover:text-[#FF00FF]"><i class="fab fa-whatsapp mr-2"></i>¿Necesitas ayuda?</a>
+		<a href="tienda.html" target="_blank" class="hover:text-[#FF00FF]"><i class="fas fa-chevron-left mr-2"></i>Volver a la tienda.</a>
+            </div>
+        </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="smiley.webp" alt="Pistola R25 NA CSC Hibrida SMILEY" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">R25 NA CSC Hibrida SMILEY</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,00 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="R25_smiley.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20Hibrida%20SMILEY" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
+    <div class="mt-12 bg-white p-8 rounded-3xl border-4 border-gray-100 shadow-xl">
+        <h2 class="text-2xl font-crazy text-gray-900 mb-6 border-b-4 border-[#FF00FF] inline-block">Descripción del producto</h2>
+        <div class="text-gray-600 leading-relaxed space-y-4">
+            <p>La pistola<strong> Fire </strong>incorpora tecnología 2026 B1B , su interior ha  diseñada para poder realizar trabajos de pintura base solvente y base agua con una aleación interna de aluminio anodizado anticorrosivo que también permite la aplicación de barnices  líquidos y semillas líquidos ( HS y UHS).</p>
+            <p>Su velocidad de aplicación intermedia la convierten en una especialista del trabajo diario , muy dura y resistente nate el uso de producción sus compuestos internos han sido especialmente reforzados para aguantar las mas duras exigencias del trabajo diario.</p>
+            <p>Su poder de transferencia es del 79% con una atomizado fino y una carga del producto muy parejo con un acabado impecable y homogéneo.</p>
+            <p>Cuerpo de aluminio tratado con CERAMICA CRISTALIZADA 9H ( dureza diamante )   para alargar la vida útil del color negro brillo y evitar arañazos.</p>
+            <p>Abanico de 50cm</p>
+            <p>Consumo de aire 190 litros por minuto </p>
+	    <P>Potencia máximo de aplicación sin rotura de abanico  2.8 bars</p>
         </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="red_edition_pro.webp" alt="Pistola R25 NA CSC Hibrida RED EDITION PRO" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">R25 NA CSC RED EDITION PRO</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,01 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="Red_edition_pro.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20Hibrida%20RED%20EDITION%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="green_edition_pro.webp" alt="Pistola R25 NA HVLP GREN EDITION PRO" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">R25 NA HVLP GREEN EDITION PRO</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,01 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="Green_edition_pro.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20HVLP%20GREN%20EDITION%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="roy_pintacarros.webp" alt="Pistola R78 NA CSC ROY PINTACARROS" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">R78 NA CSC ROY PINTACARROS</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,01 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="R78_pintacarros.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20R78%20ROY%20PINTACARROS" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="vulcan.webp" alt="Pistola R25 NA CSC VULKAN PRO" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">R25 NA CSC VULKAN PRO</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,01 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="vulcan_compact_pro.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="clear_black_pro_r25.webp" alt="Pistola R25 NA Clear Black PRO" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Pistola R25 NA Clear Black PRO</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">359,00 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="clear_black_pro_r25.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="fire_pro_r25.webp" alt="Pistola NA R25 PRO Hibrida FIRE 1.3" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Pistola NA R25 PRO Hibrida FIRE 1.3</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,01 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="fire_pro_r25.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="scorpion_paint_r25.webp" alt="Pistola NA R25 PRO Hibrida Scorpion paint" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Pistola NA R25 PRO Hibrida Scorpion paint</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">320,00 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="scorpion_paint_r25.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="manometro_NA_magnt_R_N.webp" alt="Manometro Volumetrico NA Aguja Magnetica Rojo - Negro" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Manometro Volumetrico NA Aguja Magnetica Rojo - Negro</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">35,00 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="manometro_NA_magnt_R_N.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="cabezal_ultra_fino_CB.webp" alt="Cabezal NA ULTRA FINO Para Clear Black" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Cabezal NA ULTRA FINO Para Clear Black</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">59,00 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="cabezal_ultra_fino_CB.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-xl shadow-black/20">
-            <img src="adap_sata_NR92_NR95.webp" alt="Adaptador Para Pistolas NA, Sata NR92-NR95, IWATA W400 AS1.6" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Adaptador Para Pistolas NA, Sata NR92-NR95, IWATA W400 AS1.6</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">18,98 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="adap_sata_NR92_NR95.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20la%20Pistola%20R25%20NA%20CSC%20VULKAN%20PRO" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#FF00FF]/30 rounded-2xl overflow-hidden p-6 flex flex-col hover:border-[#40E0D0] transition-all shadow-lg shadow-black/20">
-            <img src="manometro_NA_compact.webp" alt="Manometro Volumetrico NA COMPACT" class="w-full h-64 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 uppercase">Manometro Volumetrico NA COMPACT</h3>
-            <p class="text-[#FF00FF] text-2xl font-black mb-4">29,00 €</p>
-            <div class="mt-auto flex gap-2">
-            <a href="manometro_volumetrico_NA.html" class="inline-block bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-[#40E0D0] transition-colors text-sm">
-                DETALLES
-            </a>
-                <a href="https://wa.me/34652748175?text=Hola%20David,%20estoy%20interesado%20en%20el%20manometro%20NA%20de%20alta%20precision%20COMPACT" 
-                   class="flex-1 text-center bg-[#FF00FF] border border-[#FF00FF] text-white font-bold py-2 rounded hover:bg-black transition-all text-xs flex items-center justify-center">
-                   WHATSAPP
-                </a>
-            </div>
-        </div>
-
     </div>
 </main>
 
@@ -855,6 +706,42 @@
     }
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const boton = document.getElementById('btn-agregar');
+
+        boton.addEventListener('click', function() {
+            const producto = {
+                id: 'CS08R25DSR13',
+                nombre: 'R25 Fire Pro',
+                precio: 320.01,
+                imagen: 'fire_pro_r25.webp',
+                cantidad: 1
+            };
+
+            let carrito = JSON.parse(localStorage.getItem('crazy_cart')) || [];
+            const existe = carrito.findIndex(item => item.id === producto.id);
+
+            if (existe !== -1) {
+                carrito[existe].cantidad += 1;
+            } else {
+                carrito.push(producto);
+            }
+
+            localStorage.setItem('crazy_cart', JSON.stringify(carrito));
+
+            this.innerHTML = '<i class="fas fa-check mr-2"></i>Añadido!';
+            this.classList.remove('btn-crazy');
+            this.classList.add('bg-green-500', 'text-white');
+            
+            setTimeout(() => {
+                this.innerHTML = 'Añadir al carrito';
+                this.classList.remove('bg-green-500', 'text-white');
+                this.classList.add('btn-crazy');
+            }, 2000);
+        });
+    });
+</script>
 
 </body>
 </html>
