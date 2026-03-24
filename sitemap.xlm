@@ -35,8 +35,32 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/scorpion_paint_r25.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/fire_pro_r25.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/clear_black_pro_r25.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/manometro_NA_magnt_R_N.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://crazycarsgarage.github.io/crazycars/manometro_volumetrico_NA.html</loc>
     <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/cabezal_ultra_fino_CB.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crazycarsgarage.github.io/crazycars/adap_sata_NR92_NR95.html</loc>
+    <priority>0.80</priority>
   </url>
 
   <url>
