@@ -36,6 +36,8 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             overflow-x: hidden;
+	    max-width: 100%;
+	    position: relative;
         }
 
         h1, h2, h3, .nav-item {
@@ -72,9 +74,11 @@
 	    transform: rotate(-2deg); 
         }
 	.video-ajustado {
-            width: 100%;
-            aspect-ratio: 16 / 9; /* La proporción estándar de tus fotos webp */
-            object-fit: cover;
+	    width: 100%;
+	    height: auto;
+	    aspect-ratio: 16 / 9;
+	    object-fit: cover;
+	    display: block;
 	}
         .video-card {
             background: #111;
@@ -230,7 +234,7 @@
 
 <main class="max-w-7xl mx-auto px-4 py-8 flex-grow">
     
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-0">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-4">
 
     <div class="video-card overflow-hidden flex flex-col bg-[#0a0a0a] border-b border-gray-800 md:rounded-3xl md:border md:m-2">
         <div class="w-full bg-black">
@@ -278,7 +282,7 @@
 
 <section class="py-16 bg-black border-t border-[#FF00FF]/30">	
     <div class="container mx-auto px-4 text-left">
-        <div class="text-3xl md:text-4xl font-bold text-white mb-8 uppercase font-crazy whitespace-nowrap">
+	<div class="text-2xl md:text-4xl font-bold text-white mb-8 uppercase font-crazy">
             <span class="text-[#40E0D0]"><a href="https://www.instagram.com/reel/DULvls2jA8a/?igsh=dHVvczJsZW9icmJz">Entrevista #3 Adian Cuevas,</a></span> por si te la perdiste.
         </div>
         <div class="text-3xl md:text-4xl font-bold text-white mb-8 uppercase font-crazy whitespace-nowrap">
