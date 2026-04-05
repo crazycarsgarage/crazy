@@ -832,7 +832,7 @@
     }
 </script>
 
-    <script>
+     <script>
         let subtotalGlobal = 0;
 
         function cargarCarrito() {
@@ -871,25 +871,31 @@ function actualizarPrecios() {
     let envio = 0;
 
     if (pais === "España") {
-        if (subtotalGlobal >= 50) {
-            envio = 0;
-            textoEnvio.innerText = "¡Envío gratuito aplicado por pedido superior a 50€!";
-        } else {
-            envio = 12.95;
-            textoEnvio.innerText = "Gastos de envío nacional: 12,95€ (Gratis en pedidos +50€)";
-        }
+    if (subtotalGlobal >= 50) {
+        envio = 0;
+        textoEnvio.innerText = "¡Envío gratuito a España aplicado por pedido superior a 59€!.";
+    } else {
+        envio = 12.95;
+        textoEnvio.innerText = "Gastos de envío nacional: 12,95€ (Gratis en pedidos +59€)";
+    }
     } else if (pais === "EU") {
-        envio = 28.95;
-        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 28,95€ aplicados.`;
+        envio = 71.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 71,95€ aplicados.`;
     } else if (pais === "UK") {
-        envio = 25.95;
-        textoEnvio.innerText = "Gastos de envío a Reino Unido: 25,95€ aplicados.";
+        envio = 125.95;
+        textoEnvio.innerText = "Gastos de envío a ${nombrePais}: 125,95€ aplicados.";
     } else if (pais === "Latam") {
-        envio = 46.95;
-        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 46,95€ aplicados.`;
+        envio = 90.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 90,95€ aplicados.`;
+    } else if (pais === "Brasil") {
+        envio = 119.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 119,95€ aplicados.`;
+    } else if (pais === "Groenlandia") {
+        envio = 132.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 132,95€ aplicados. Costes de aranceles a cargo del cliente`;
     } else if (pais === "NAmerica") {
-        envio = 48.95;
-        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 48,95€ aplicados.`;
+        envio = 90.95;
+        textoEnvio.innerText = `Gastos de envío a ${nombrePais}: 90,95€ aplicados. Costes de aranceles a cargo del cliente`;
     } else {
         envio = 0;
         textoEnvio.innerText = "Selecciona un país para calcular envío";
