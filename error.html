@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Cars Garage - Pistola R25 NA CSC Hibrida Red Edition Pro - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
+    <title>Crazy Cars Garage - Compra realizada con exito - Crazy Business | Tienda de Herramientas de Pintura y Taller de Chapa y Pintura</title>
 
     <meta name="author" content="ciberbross90">
     <meta name="copyright" content="ciberbross90">
@@ -38,11 +38,11 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .nav-item, .font-crazy {
+        h1, h2, h3, .nav-item {
             font-family: 'Permanent Marker', cursive;
         }
 
-	.neon-title {
+        .neon-title {
             color: #fff;
             text-shadow:
                 0 0 7px #fff,
@@ -62,23 +62,88 @@
             text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
         }
 
-        .product-card {
-            background: #fff;
-            border: 4px solid var(--crazy-dark);
-            box-shadow: 15px 15px 0px var(--crazy-dark);
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid white;
+            box-shadow: 5px 5px 0px var(--crazy-dark);
+        }
+        .gallery-item:hover {
+            transform: scale(1.03) rotate(1deg);
+            border-color: var(--crazy-fuchsia);
+            box-shadow: 8px 8px 0px rgba(255, 0, 255, 0.5);
+            z-index: 10;
         }
 
-        .btn-crazy {
-            background-color: var(--crazy-fuchsia);
-            transition: all 0.3s ease;
-            box-shadow: 4px 4px 0px var(--crazy-dark);
+        .before-after-container {
+            position: relative;
+            overflow: hidden;
+            border: 4px solid var(--crazy-fuchsia);
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
         }
 
-        .btn-crazy:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px var(--crazy-dark);
+        .before-image, .after-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
+        .after-image {
+            clip-path: inset(0 0 0 50%); /* Start with half clip */
+        }
+
+        .before-after-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: var(--crazy-fuchsia);
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1; /* For mobile if touch-based */
+        }
+
+        .before-after-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--crazy-fuchsia);
+            cursor: ew-resize;
+            box-shadow: 0 0 0 5px white, 0 0 0 8px var(--crazy-fuchsia);
+        }
+
+        .before-after-slider::-moz-range-thumb {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--crazy-fuchsia);
+            cursor: ew-resize;
+            box-shadow: 0 0 0 5px white, 0 0 0 8px var(--crazy-fuchsia);
+        }
+	
+	@keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite ease-in-out;
+        }
+
+        .modal-content {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
         #cookieBanner {
             position: fixed;
             bottom: 0;
@@ -88,6 +153,8 @@
             background: white;
             display: block; 
         }
+	@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        .font-crazy { font-family: 'Permanent Marker', cursive; }
     </style>
 
 <script type="application/ld+json">
@@ -305,92 +372,56 @@
 <link rel="canonical" href="https://crazycarsgarage.github.io/crazycars/">
 
 </head>
-<body class="flex flex-col min-h-screen">
 
-<section class="relative w-full h-[25vh] md:h-[55vh] overflow-hidden">
-    <img src="urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo profesional de chapa y pintura Crazy Cars Garage">
-    <img src="crazy art.webp" class="absolute top-0 right-0 h-full w-auto object-cover z-10" alt="Crazy Cars Garage - Tienda de Pistolas de Pintura">
-</section>
+<body class="bg-black text-white flex flex-col min-h-screen">
 
-<nav class="nav-bar text-white sticky top-0 z-50">
-    <div class="container mx-auto px-4 max-w-7xl">
-        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center py-3">
-            <h2><a href="index.html" class="text-2xl font-bold hidden md:block font-crazy">CRAZY BUSINESS S.L.</a></h2>
-            <ul class="flex flex-wrap justify-center gap-4 text-sm md:text-lg uppercase font-crazy">
-                <li><a href="index.html" class="nav-link px-3 py-2 block text-white"><i class="fas fa-home"></i></a></li>
-                <li><a href="historia.html" class="nav-link px-3 py-2 block">Quienes somos</a></li>
-                <li><a href="autos_locos.html" class="nav-link px-3 py-2 block">Autos Locos</a></li>
-                <li><a href="chapa_pintura_lunas_serranillos_del_valle.html" class="nav-link px-3 py-2 block">Servicios</a></li>
-                <li><a href="podcast.html" class="nav-link px-3 py-2 block">Podcast</a></li>
-                <li><a href="tienda.html" class="nav-link px-3 py-2 block">Tienda</a></li>
-                <li><a href="carrito.html" class="nav-link px-3 py-2 block"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    <section class="relative w-full h-[25vh] md:h-[55vh] overflow-hidden shrink-0">
+        <img src="urban_BMW.webp" class="w-full h-full object-cover object-top" alt="Trabajo profesional de chapa y pintura Crazy Cars Garage">
+        <img src="crazy art.webp" class="absolute top-0 right-0 h-full w-auto object-cover z-10" alt="Crazy Cars Garage - Tienda de Pistolas de Pintura">
+    </section>
 
-<header class="container mx-auto px-4 py-8 text-center">
-        <h1 class="text-5xl md:text-7xl neon-title mb-6">Pistola R25 Red Edition Pro</h1>
-</header>
-
-<main class="container mx-auto px-4 py-12 max-w-6xl flex-grow">
-
-    <div class="product-card rounded-3xl overflow-hidden flex flex-col md:flex-row gap-8 p-6 md:p-10">
-        
-        <div class="w-full md:w-1/2 space-y-4">
-            <div class="aspect-square bg-white rounded-2xl overflow-hidden border-4 border-gray-100 shadow-inner">
-                <img src="red_edition_pro.webp" alt="Pistola Red Edition Pro, pistola de pintura profesional de alta gama para carroceria, perfecta para el taller." class="w-full h-full object-contain p-4">
-            </div>
-            <div class="grid grid-cols-4 gap-2">
-                <div class="aspect-square bg-gray-100 rounded-lg border-2 border-[#FF00FF] p-1"><img src="red_edition_pro.webp" class="w-full h-full object-contain"></div>
-                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="red_edition_pro1.webp" class="w-full h-full object-contain"></div>
-                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="red_edition_pro2.webp" class="w-full h-full object-contain"></div>
-                <div class="aspect-square bg-gray-50 rounded-lg border border-gray-200"><img src="red_edition_pro3.webp" class="w-full h-full object-contain"></div>
+    <nav class="nav-bar text-white sticky top-0 z-50 w-full">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-center md:justify-between items-center py-3">
+                <h2><a href="index.html" class="text-2xl font-bold hidden md:block font-crazy">CRAZY BUSINESS S.L.</a></h2>
+                <ul class="flex flex-wrap justify-center gap-4 text-sm md:text-lg uppercase font-crazy">
+                    <li><a href="index.html" class="nav-link px-3 py-2 block text-white"><i class="fas fa-home"></i></a></li>
+                    <li><a href="historia.html" class="nav-link px-3 py-2 block">Quienes somos</a></li>
+                    <li><a href="autos_locos.html" class="nav-link px-3 py-2 block">Autos Locos</a></li>
+                    <li><a href="chapa_pintura_lunas_serranillos_del_valle.html" class="nav-link px-3 py-2 block">Servicios</a></li>
+                    <li><a href="podcast.html" class="nav-link px-3 py-2 block">Podcast</a></li>
+                    <li><a href="tienda.html" class="nav-link px-3 py-2 block">Tienda</a></li>
+                    <li><a href="carrito.html" class="nav-link px-3 py-2 block"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="w-full md:w-1/2 flex flex-col justify-center">
-            <h1 class="text-3xl md:text-4xl font-crazy text-gray-900 mb-2">Pistola R25 NA CSC Hibrida Red Edition Pro</h1>
-            <p class="text-gray-500 font-bold mb-4"><strong>Ref:</strong>CS08R25B2013</p>
+    <main class="flex-grow flex items-center justify-center py-10">
+        <div class="text-center p-10 border-4 border-[#FF0000] rounded-3xl shadow-[0_0_20px_#FF0000] max-w-lg mx-4 bg-black">
+            <div class="text-6xl mb-4">⚠️</div>
             
-            <div class="bg-gray-50 p-6 rounded-2xl border-l-8 border-[#FF00FF] mb-6">
-                <p class="text-[#FF00FF] font-black text-xl mb-2 italic underline"></p>
-                <div class="flex items-center gap-4 mb-4">
-                    <span class="text-xl text-gray-400 line-through italic">533,35 €</span>
-                    <span class="text-4xl font-crazy text-gray-900 italic">320,01 €</span>
-	    <p class="text-gray-700 text-[10px] tracking-widest italic">Impuestos no incluidos</p>
-                </div>
-                <p class="text-red-600 font-black animate-pulse mb-4"></p>
-                <p class="text-sm leading-relaxed mb-4 font-medium uppercase italic">Pistola R25 generación híbrida para aplicación de colores base agua o base solvente. INCLUYE DEPOSITO DE GRAVEDAD.</p>
-                <p class="text-sm leading-relaxed mb-4">NO INCLUYE MANOMETRO . NO INCLUIDO COPLE PARA VASOS PPS NI PPS 2.0</p>
-                <p class="text-sm leading-relaxed mb-4 font-bold text-red-600 italic">PISTOLA R25 NA NORBER CSC - BASE HIBRIDA - RED EDITION PRO</p>
-                <p class="text-[#FF00FF] font-crazy text-2xl mt-2 italic">NO TE QUEDES SIN LA TUYA!!</p>
-            </div>
+            <h1 class="text-4xl md:text-6xl font-crazy text-[#FF0000] mb-4 uppercase">¡Avería en Boxes!</h1>
+            
+            <p class="text-xl mb-6 uppercase font-bold text-white">El pago no se ha podido completar.</p>
+            
+            <p class="text-gray-400 mb-8">
+                Parece que ha habido un problema con la tarjeta o el proceso se ha cancelado. 
+                No te preocupes, tus piezas siguen en el carrito.
+            </p>
 
-            <div class="flex flex-col gap-4">
-                <button id="btn-agregar" class="btn-crazy text-white font-bold py-4 rounded-xl text-xl uppercase italic shadow-lg">Añadir al carrito</button>
-                <a href="carrito.html" class="bg-gray-200 text-gray-800 font-bold py-4 rounded-xl text-xl uppercase italic hover:bg-gray-300 transition-all border-b-4 border-gray-400 text-center block">Ver mi carrito</a>
-            </div>
-
-            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-6 text-xs uppercase font-bold text-gray-400">
-                <a href="https://wa.me/34652748175" target="_blank" class="hover:text-[#FF00FF]"><i class="fab fa-whatsapp mr-2"></i>¿Necesitas ayuda?</a>
-		<a href="tienda.html" target="_blank" class="hover:text-[#FF00FF]"><i class="fas fa-chevron-left mr-2"></i>Volver a la tienda.</a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="carrito.html" class="bg-white text-black px-8 py-3 rounded-full font-black uppercase hover:scale-105 transition-transform inline-block">
+                    Reintentar Pago
+                </a>
+                
+                <a href="index.html" class="border-2 border-[#FF00FF] text-[#FF00FF] px-8 py-3 rounded-full font-black uppercase hover:bg-[#FF00FF] hover:text-black transition-all inline-block">
+                    Volver al Garage
+                </a>
             </div>
         </div>
-    </div>
-
-    <div class="mt-12 bg-white p-8 rounded-3xl border-4 border-gray-100 shadow-xl">
-        <h2 class="text-2xl font-crazy text-gray-900 mb-6 border-b-4 border-[#FF00FF] inline-block">Descripción del producto</h2>
-        <div class="text-gray-600 leading-relaxed space-y-4">
-            <p>-Tecnología de ultima generación híbrida para aplicaciones de barnices y colores base agua o base solvente.</p>
-            <p>-Cuerpo de aleación de  aluminio ultra ligero.ALUMINEX PRO.</p>
-            <p>-Boquilla híbrida HT2.Acabados de calidad.</p>
-            <p>-Peso 440 gramos.</p>
-            <p>-Fabricada sin juntas de goma ni teflón en sus bocas internas.</p>
-            <p>-Consumo de aire 180 - 220 litros por minuto.</p>
-        </div>
-    </div>
-</main>
+    </main>
+    </body>
 
 <footer class="bg-gray-900 text-white pt-10 pb-6 border-t-4 border-[#FF00FF]">
     <div class="container mx-auto px-4 max-w-6xl">
@@ -813,62 +844,17 @@
         }
     })();
 
-function toggleModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) {
-        console.error("No se encuentra el modal con id:", id);
-        return;
-    }
-
-    if (modal.classList.contains('hidden')) {
-        // ABRIR
-        modal.classList.remove('hidden');
-        modal.style.display = 'flex'; // Forzamos visibilidad
-        document.body.style.overflow = 'hidden';
-    } else {
-        // CERRAR
-        modal.classList.add('hidden');
-        modal.style.display = 'none'; // Forzamos ocultación
-        document.body.style.overflow = 'auto';
-    }
-}
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const boton = document.getElementById('btn-agregar');
-
-        boton.addEventListener('click', function() {
-            const producto = {
-                id: 'CS08R25B2013',
-                nombre: 'Red Edition Pro',
-                precio: 320.01,
-                imagen: 'red_edition_pro.webp',
-                cantidad: 1
-            };
-
-            let carrito = JSON.parse(localStorage.getItem('crazy_cart')) || [];
-            const existe = carrito.findIndex(item => item.id === producto.id);
-
-            if (existe !== -1) {
-                carrito[existe].cantidad += 1;
+    function toggleModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.body.style.overflow = 'hidden';
             } else {
-                carrito.push(producto);
+                document.body.style.overflow = 'auto';
             }
-
-            localStorage.setItem('crazy_cart', JSON.stringify(carrito));
-
-            this.innerHTML = '<i class="fas fa-check mr-2"></i>Añadido!';
-            this.classList.remove('btn-crazy');
-            this.classList.add('bg-green-500', 'text-white');
-            
-            setTimeout(() => {
-                this.innerHTML = 'Añadir al carrito';
-                this.classList.remove('bg-green-500', 'text-white');
-                this.classList.add('btn-crazy');
-            }, 2000);
-        });
-    });
+        }
+    }
 </script>
 
 </body>
