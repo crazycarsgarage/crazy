@@ -442,20 +442,25 @@
     </div>
 </footer>
 
-<div id="modalCookies" class="fixed inset-0 bg-black bg-opacity-90 z-[100000] hidden flex items-center justify-center p-4">
-    <div class="bg-white text-gray-800 max-w-2xl w-full rounded-3xl border-4 border-gray-400 shadow-2xl overflow-hidden">
-        <div class="p-6 md:p-10 text-sm space-y-6 text-justify modal-content">
-            <h2 class="font-bold uppercase text-xl border-b pb-2 text-gray-900">Política de cookies</h2>
-            <p>Política de cookies. Crazy Business no utiliza cookies para recoger información de los usuarios. Únicamente se utilizan cookies propias y de terceros con finalidad técnica para permitir la navegación a través del sitio web y la utilización de las diferentes opciones y servicios que en ella existen.</p>
-            <p>El portal del que es titular Crazy Business contiene enlaces a sitios web de terceros, cuyas políticas de privacidad son ajenas a la de Crazy Business. Al acceder a tales sitios web usted puede decidir si acepta sus políticas de privacidad y de cookies. Con carácter general, si navega por internet usted puede aceptar o rechazar las cookies de terceros desde las opciones de configuración de su navegador.</p>
+<div id="modalCookies" class="fixed inset-0 bg-black bg-opacity-90 z-[200000] hidden flex items-center justify-center p-4">
+    <div class="bg-white text-gray-800 max-w-4xl w-full rounded-3xl border-4 border-[#FF00FF] shadow-2xl overflow-hidden">
+        <div class="p-6 border-b flex justify-between items-center bg-gray-50 rounded-t-3xl">
+            <h2 class="font-crazy text-2xl text-[#FF00FF] uppercase">Política de Cookies</h2>
+            <button onclick="toggleModal('modalCookies')" class="text-gray-400 hover:text-black text-3xl transition">&times;</button>
         </div>
-        <div class="p-4 text-center border-t bg-gray-50">
-            <button onclick="toggleModal('modalCookies')" class="bg-black text-white px-8 py-2 rounded-full font-bold uppercase text-xs hover:bg-gray-700 transition">Cerrar</button>
+        
+        <div class="p-6 md:p-10 text-sm space-y-4 text-justify modal-content overflow-y-auto" style="max-height: 60vh;">
+            <p><strong>Crazy Business S.L.</strong> no utiliza cookies para recoger información de los usuarios. Únicamente se utilizan cookies propias y de terceros con <strong>finalidad técnica</strong> para permitir la navegación a través del sitio web y la utilización de las diferentes opciones y servicios que en ella existen.</p>
+            <p>El portal del que es titular Crazy Business contiene enlaces a sitios web de terceros, cuyas políticas de privacidad son ajenas a la nuestra. Al acceder a tales sitios web, usted puede decidir si acepta sus políticas de privacidad y de cookies desde las opciones de configuración de su navegador.</p>
+        </div>
+
+        <div class="p-4 text-center border-t bg-gray-50 rounded-b-3xl">
+            <button onclick="toggleModal('modalCookies')" class="bg-black text-white px-10 py-2 rounded-full font-bold uppercase text-xs hover:bg-[#40E0D0] transition-all shadow-lg">Cerrar</button>
         </div>
     </div>
 </div>
 
-<div id="modalPrivacidad" class="fixed inset-0 bg-black bg-opacity-90 z-[100000] hidden flex items-center justify-center p-4">
+<div id="modalPrivacidad" class="fixed inset-0 bg-black bg-opacity-90 z-[200000] hidden flex items-center justify-center p-4">
     <div class="bg-white text-gray-800 max-w-4xl w-full rounded-3xl border-4 border-[#FF00FF] shadow-2xl overflow-hidden">
         <div class="p-6 border-b flex justify-between items-center bg-gray-50 rounded-t-3xl">
             <h2 class="font-crazy text-2xl text-[#FF00FF] uppercase">Política de Privacidad</h2>
@@ -505,34 +510,39 @@
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Conservación de Datos</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Cesion a terceros</h3>
+                <p>Los datos podrán ser cedidos o comunicados a entidades bancarias para la gestión de cobros y pagos, así como a empresas de transporte para el envío de los productos adquiridos, solo con estos fines aqui descritos.</p>
+            </section>
+
+
+            <section>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">4. Conservación de Datos</h3>
                 <p>Los datos personales proporcionados para la ejecución del contrato se conservarán mientras se mantenga la relación comercial y, posteriormente, durante los plazos exigidos por la legislación fiscal y civil para la atención de posibles responsabilidades.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">4. Derechos del Interesado</h3>
-                <p>Usted tiene derecho a obtener confirmación sobre si estamos tratando sus datos. Puede ejercer sus derechos de acceso, rectificación, supresión, limitación y portabilidad enviando un e-mail a la dirección arriba indicada acompañando copia de su DNI.</p>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">5. Derechos del Interesado</h3>
+                <p>Usted tiene derecho a obtener confirmación sobre si estamos tratando sus datos. Puede ejercer sus derechos de acceso, rectificación, supresión, limitación y portabilidad enviando un e-mail a la dirección arriba indicada identificandose legalmente. Asimismo, le informamos de su derecho a presentar una reclamación ante la Agencia Española de Protección de Datos <strong><span class="hover:text-[#FF00FF] transition"> <a href="https://www.aepd.es/ class=text-[#40E0D0] font-bold">(www.aepd.es)</a></span></strong> si considera que el tratamiento no se ajusta a la normativa vigente.</p>
             </section>
-
         </div>
         
         <div class="p-4 text-center border-t bg-gray-50 rounded-b-3xl">
-            <button onclick="toggleModal('modalPrivacidad')" class="bg-black text-white px-10 py-2 rounded-full font-bold uppercase text-xs hover:bg-[#40E0D0] transition-all shadow-lg">Aceptar y Cerrar</button>
+            <button onclick="toggleModal('modalPrivacidad')" class="bg-black text-white px-10 py-2 rounded-full font-bold uppercase text-xs hover:bg-[#40E0D0] transition-all shadow-lg">Entendido</button>
         </div>
     </div>
 </div>
 
-<div id="modalUso" class="fixed inset-0 bg-black bg-opacity-90 z-[100000] hidden flex items-center justify-center p-4">
+<div id="modalUso" class="fixed inset-0 bg-black bg-opacity-90 z-[200000] hidden flex items-center justify-center p-4">
     <div class="bg-white text-gray-800 max-w-5xl w-full rounded-3xl border-4 border-[#FF00FF] shadow-2xl overflow-hidden">
         <div class="p-6 border-b flex justify-between items-center bg-gray-50 rounded-t-3xl">
-            <h2 class="font-crazy text-2xl text-[#40E0D0] uppercase">Condiciones de Uso - Crazy Business S.L.</h2>
+            <h2 class="font-crazy text-2xl text-[#FF00FF] uppercase">Condiciones de Uso - Crazy Business S.L.</h2>
             <button onclick="toggleModal('modalUso')" class="text-gray-400 hover:text-black text-3xl transition">&times;</button>
         </div>
 
         <div class="p-6 md:p-10 text-sm space-y-6 text-justify modal-content overflow-y-auto" style="max-height: 70vh;">
             
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">1. Obligaciones y Responsabilidad del Usuario</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">1. Obligaciones y Responsabilidad del Usuario</h3>
                 <p>El usuario se compromete a utilizar los servicios y contenidos del portal de forma diligente, correcta y lícita. Queda terminantemente prohibido:</p>
                 <ul class="list-disc ml-5 mt-2 space-y-1">
                     <li>Utilizar los contenidos con fines o efectos contrarios a la ley, a la moral y a las buenas costumbres generalmente aceptadas.</li>
@@ -544,7 +554,7 @@
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">2. Propiedad Intelectual sobre Comentarios y Opiniones</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">2. Propiedad Intelectual sobre Comentarios y Opiniones</h3>
                 <p>Aquellos usuarios que envíen observaciones, opiniones o comentarios a través de los servicios habilitados en el portal autorizan a CRAZY BUSINESS S.L. para su reproducción, distribución, comunicación pública y transformación.</p>
                 <p>Esta autorización se entiende realizada:</p>
                 <ul class="list-disc ml-5 mt-2 space-y-1">
@@ -556,8 +566,13 @@
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">3. Reserva de Derechos</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Reserva de Derechos</h3>
                 <p>CRAZY BUSINESS S.L. se reserva la facultad de interrumpir el acceso al portal o excluir al usuario en caso de observar conductas contrarias a las reglas internas o que puedan perturbar el buen funcionamiento, imagen o prestigio de la marca.</p>
+            </section>
+
+            <section>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">4. Veracidad de Datos</h3>
+                <p>El usuario garantiza que los datos facilitados para el proceso de compra son veraces y actuales. CRAZY BUSINESS S.L. no se hace responsable de errores en la entrega derivados de información incorrecta proporcionada por el usuario.</p>
             </section>
 
         </div>
@@ -569,16 +584,16 @@
 </div>
 
 <div id="modalLegal" class="fixed inset-0 bg-black bg-opacity-90 z-[100000] hidden flex items-center justify-center p-4">
-    <div class="bg-white text-gray-800 max-w-4xl w-full rounded-3xl border-4 border-[#40E0D0] shadow-2xl overflow-hidden">
+    <div class="bg-white text-gray-800 max-w-4xl w-full rounded-3xl border-4 border-[#FF00FF] shadow-2xl overflow-hidden">
         <div class="p-6 border-b flex justify-between items-center bg-gray-50 rounded-t-3xl">
-            <h2 class="font-crazy text-2xl text-[#40E0D0] uppercase">Aviso Legal</h2>
+            <h2 class="font-crazy text-2xl text-[#FF00FF] uppercase">Aviso Legal</h2>
             <button onclick="toggleModal('modalLegal')" class="text-gray-400 hover:text-black text-3xl transition">&times;</button>
         </div>
         
         <div class="p-6 md:p-10 text-sm space-y-6 text-justify modal-content overflow-y-auto" style="max-height: 70vh;">
             
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">1. Datos Identificativos</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">1. Datos Identificativos</h3>
                 <p class="mb-4">En cumplimiento con el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se facilitan los siguientes datos:</p>
                 
                 <div class="bg-gray-50 p-5 rounded-2xl border border-gray-200 space-y-2">
@@ -594,72 +609,94 @@
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">2. Propiedad Intelectual</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">2. Propiedad Intelectual</h3>
                 <p>CRAZY BUSINESS S.L. es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, etc.).</p>
                 <p>Queda expresamente prohibida la reproducción, distribución y comunicación pública de la totalidad o parte de los contenidos de esta página web con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de la empresa.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">3. Exclusión de Responsabilidad</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Exclusión de Responsabilidad</h3>
                 <p>El titular no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">4. Enlaces (Links)</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">4. Enlaces (Links)</h3>
                 <p>En el caso de que en la web se dispusiesen enlaces hacia otros sitios de Internet, CRAZY BUSINESS S.L. no ejercerá ningún tipo de control sobre dichos sitios y contenidos. En ningún caso asumirá responsabilidad alguna por los contenidos de algún enlace perteneciente a un sitio web ajeno.</p>
+            </section>
+
+	    <section>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">5. Uso y Protección de Datos</h3>
+	<p>El acceso y uso de este sitio web atribuye la condición de USUARIO, que acepta, desde dicho acceso las siguientes condiciones:</p>
+	    <ul class="list-disc ml-5 mt-2 space-y-1">
+	    <li>Las <strong>Condiciones de Uso</strong> <span class="text-[#40E0D0] font-bold"><button 					onclick="toggleModal('modalUso')" class="hover:text-[#FF00FF] transition">aquí</button></span> 				reflejadas.</li>
+	    <li>Nuestra <strong>Política de Privacidad</strong> a la que puede acceder pinchando <span class="text-[#40E0D0] font-bold"><button onclick="toggleModal('modalPrivacidad')" class="hover:text-[#FF00FF] transition">aquí</button></span> (tratamiento de datos personales).</li>
+	    <li>Nuestra <strong>Política de Cookies</strong> a la que puede acceder haciendo click <span class="text-[#40E0D0] font-bold"><button onclick="toggleModal('modalCookies')" class="hover:text-[#FF00FF] transition">aquí</button></span>.</li>
+	    </ul>
+            </section>
+
+	    <section>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">6. Legislación y Jurisdicción</h3>
+                <p>Para cualquier controversia que pudiera derivarse del acceso o uso de esta página web, el usuario y CRAZY BUSINESS S.L. se someten expresamente a los Juzgados y Tribunales de Navalcarnero (Madrid), renunciando a cualquier otro fuero que pudiera corresponderles.</p>
             </section>
 
         </div>
         
         <div class="p-4 text-center border-t bg-gray-50 rounded-b-3xl">
-            <button onclick="toggleModal('modalLegal')" class="bg-black text-white px-10 py-2 rounded-full font-bold uppercase text-xs hover:bg-[#40E0D0] transition-all shadow-lg">Cerrar</button>
+            <button onclick="toggleModal('modalLegal')" class="bg-black text-white px-10 py-2 rounded-full font-bold uppercase text-xs hover:bg-[#40E0D0] transition-all shadow-lg">Aceptar y Cerrar</button>
         </div>
     </div>
 </div>
 
 <div id="modalReparacion" class="fixed inset-0 bg-black bg-opacity-90 z-[100000] hidden flex items-center justify-center p-4">
-    <div class="bg-white text-gray-800 max-w-5xl w-full rounded-3xl border-4 border-[#40E0D0] shadow-2xl overflow-hidden">
+    <div class="bg-white text-gray-800 max-w-5xl w-full rounded-3xl border-4 border-[#FF00FF] shadow-2xl overflow-hidden">
         <div class="p-6 border-b flex justify-between items-center bg-gray-50 rounded-t-3xl">
-            <h2 class="font-crazy text-2xl text-[#40E0D0] uppercase">Condiciones de Taller y Reparación</h2>
+            <h2 class="font-crazy text-2xl text-[#FF00FF] uppercase">Condiciones de Taller y Reparación</h2>
             <button onclick="toggleModal('modalReparacion')" class="text-gray-400 hover:text-black text-3xl transition">&times;</button>
         </div>
         
         <div class="p-6 md:p-10 text-sm space-y-6 text-justify modal-content overflow-y-auto" style="max-height: 75vh;">
             
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">1. Aplicación y Resguardo de Depósito</h3>
-                <p>Estas condiciones regulan los servicios de chapa, pintura y mecánica prestados por <strong>CRAZY BUSINESS S.L.</strong> (CIF B22801138) en nuestro centro de Serranillos del Valle. La entrega del vehículo implica la aceptación de estas condiciones y la firma del Resguardo de Depósito/Orden de Trabajo.</p>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">1. Aplicación y Resguardo de Depósito</h3>
+                <p>Estas condiciones regulan los servicios de chapa y pintura prestados por <strong>CRAZY BUSINESS S.L.</strong> (CIF B22801138) en nuestro centro de Serranillos del Valle. La entrega del vehículo implica la aceptación de estas condiciones y la firma del Resguardo de Depósito/Orden de Trabajo.</p>
+		<p>Para servicios específicos no prestados directamente como la sustitución de lunas, CRAZY BUSINESS S.L. podrá gestionar la reparación a través de talleres colaboradores especializados, manteniendo siempre la responsabilidad de la garantía frente al cliente.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">2. Presupuestos y Diagnóstico</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">2. Presupuestos y Diagnóstico</h3>
                 <p>Las estimaciones iniciales se basan en la información del cliente. Si al desmontar el vehículo (especialmente en trabajos de chapa tras un siniestro) aparecen daños ocultos, se informará al cliente y solo se procederá tras su aceptación del nuevo presupuesto. Los presupuestos tienen una validez de 12 días hábiles.</p>
+		<p>En reparaciones a través de compañías aseguradoras, el cliente es el responsable último del pago de la factura en caso de que la compañía rehúse el siniestro, aplique una franquicia o exista una diferencia de peritación, debiendo el cliente abonar la diferencia antes de retirar el vehículo.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">3. Custodia y Abandono</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Custodia y Abandono</h3>
                 <p>El depósito del vehículo está incluido en el precio de reparación. Una vez terminada la reparación y avisado el cliente, este dispone de <strong>3 días hábiles</strong> para recoger el coche. A partir del cuarto día, se devengarán gastos de estancia y custodia según las tarifas vigentes del taller.</p>
-                <p class="text-red-600 font-bold">Importante: Crazy Cars Garage no se hace responsable de objetos personales dejados en el interior del vehículo.</p>
+                <p class="text-red-600 font-bold">Importante: Se ruega al cliente retirar todos los objetos personales y de valor que no sean inherentes al vehiculo. Crazy Business S.L., no se responsabiliza de la pérdida o daño de objetos no declarados expresamente en el resguardo de depósito.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">4. Garantía de Reparación</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">4. Garantía de Reparación</h3>
                 <p>Todas nuestras reparaciones están garantizadas por <strong>3 meses o 2.000 kilómetros</strong> (lo que antes suceda), conforme al R.D. 1457/1986. Las piezas nuevas instaladas cuentan con la garantía legal de 3 años otorgada por el fabricante. La garantía se anula si el vehículo es manipulado por terceros tras nuestra intervención.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">5. Piezas de Repuesto</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">5. Piezas de Repuesto</h3>
                 <p>El cliente tiene derecho a recuperar las piezas sustituidas siempre que lo solicite al depositar el vehículo. En caso contrario, Crazy Cars Garage procederá a su gestión como residuo según la normativa medioambiental. Nos reservamos el derecho de no instalar piezas aportadas por el cliente si estas comprometen la seguridad vial.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">6. Pruebas y Seguro</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">6. Pruebas y Seguro</h3>
                 <p>Al firmar el resguardo, el cliente autoriza a realizar las pruebas en carretera necesarias para verificar la reparación. El cliente declara que el vehículo dispone de Seguro de Responsabilidad Civil obligatorio en vigor.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#FF00FF] inline-block">7. Pago y Retención</h3>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">7. Pago y Retención</h3>
                 <p>El pago se realizará mediante tarjeta, efectivo (dentro de los límites legales) o transferencia antes de retirar el vehículo. Conforme al Art. 1.780 del Código Civil, el taller podrá retener el vehículo hasta que la factura sea abonada íntegramente.</p>
+            </section>
+
+            <section>
+                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">8. Hojas de Reclamaciones</h3>
+                <p>En el caso que no este conforme con la reparacion o el trato recibido, y conforme a la <strong>Ley General para la de Defensa de los Consumidores y Usuarios</strong> (LGDCU), CRAZY BUSINESS S.L., dispone de hojas de reclamaciones a disposición del público en nuestro domicilio social.</p>
             </section>
 
             <section class="bg-gray-100 p-4 rounded-lg border-l-4 border-[#40E0D0]">
@@ -697,14 +734,14 @@
                 <p>Nuestros productos de pintura y barnices están sujetos a disponibilidad de stock. En caso de rotura de stock de un barniz o resina específica, contactaremos con el cliente para ofrecer una alternativa de similar calidad o el reembolso total. <strong>Nota importante:</strong> Es responsabilidad del cliente verificar la compatibilidad química de las pinturas y barnices con la superficie a tratar.</p>
             </section>
 
-            <section>
-                <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Tarifas y Pago</h3>
-                <p>Los precios se expresan en euros y no incluyen impuestos. Los impuestos se añadiran en la pasarela de pago. Los gastos de envío se calcularán según el peso de los botes de pintura o equipos de pulverización (el pedido). Crazy Business S.L. se reserva el derecho de modificar precios sin previo aviso, garantizando siempre el precio vigente en el momento de la validación del pedido.</p>
-            </section>
+	<section>
+	    <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">3. Tarifas y Pago</h3>
+	    <p>Los precios de los artículos de nuestro catálogo no incluyen IVA. El IVA será aplicado al finalizar la compra. Los pedidos realizados mediante transferencia bancaria, no serán tramitados hasta completarse la transferencia. Los pedidos web son tramitados de lunes a viernes. Los gastos de envío se calcularán según el peso y destino. Crazy Business S.L. garantiza el precio vigente en el momento de la compra.</p>
+	</section>
 
-<section>
+	<section>
                 <h3 class="font-bold text-gray-900 uppercase mb-2 border-b-2 border-[#40E0D0] inline-block">4. Entrega de Materiales</h3>
-                <p class="mb-4">Realizamos envíos a toda la Península y Baleares. Debido a la naturaleza inflamable de algunas pinturas y barnices, el transporte se realiza cumpliendo la normativa vigente de mercancías. Si el producto llega con el precinto abierto o el envase dañado, el cliente debe hacerlo constar en el albarán del transportista.</p>
+                <p class="mb-4">Realizamos envíos a toda la Península y Baleares. Para envíos a Canarias, Ceuta, Melilla y países fuera de la UE, el cliente será el responsable de abonar los impuestos locales (IGIC, IPSI, IVA de importación) y los aranceles aduaneros correspondientes al recibir la mercancía. Debido a la naturaleza inflamable de algunas pinturas y barnices, el transporte se realiza cumpliendo la normativa vigente de mercancías. Si el producto llega con el precinto abierto o el envase dañado, el cliente debe hacerlo constar en el albarán del transportista.</p>
                 
                 <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-lg border border-dashed border-gray-300">
                     <div class="text-[#40E0D0] shrink-0">
@@ -739,7 +776,7 @@
                 </ul>
 
                 <p class="font-bold mb-1">Condiciones del Reembolso:</p>
-                <p>Una vez verificada la mercancía, se procederá a la devolución por el mismo método de pago en un plazo máximo de 14 días. En devoluciones por insatisfacción (no por defecto), Crazy Business S.L. se reserva el derecho de retener un porcentaje en concepto de manipulación, revisión y gestión administrativa.</p>
+                <p>Una vez verificada la mercancía, se procederá a la devolución por el mismo método de pago en un plazo máximo de 14 días.</p>
             </section>
 
             <section>
@@ -750,7 +787,7 @@
                     <p><strong>2. Preparación:</strong> Guarde los artículos en su embalaje original de fábrica, completos (con accesorios y manuales si los tuviera) y junto a una copia de la factura.</p>
                     
                     <p><strong>3. Envío:</strong> El cliente deberá gestionar y correr con los gastos de envío asociados a la devolución. El paquete debe enviarse a portes pagados. 
-                    <br><span class="text-xs italic">*Si desea que Crazy Business S.L. gestione la recogida, se descontará el importe del transporte del abono final (importe mínimo de 7,50€, variable según volumen y peso).</span></p>
+                    <br><span class="text-xs italic">*Si desea que Crazy Business S.L. gestione la recogida, se descontará el importe del transporte del abono final (importe mínimo de 7,50€, variable según volumen, peso y procedencia).</span></p>
                     
                     <p class="text-xs bg-yellow-50 p-2 border-l-2 border-yellow-400">Crazy Business S.L. no se hará cargo de productos manipulados por el cliente o mercancías que se devuelvan incompletas.</p>
                 </div>
@@ -774,13 +811,15 @@
     </div>
 </div>
 
+
+
 <div id="cookie-law-banner" class="fixed bottom-0 left-0 w-full z-[9999] p-4">
     <div class="max-w-4xl mx-auto bg-black border border-[#40E0D0]/30 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.9)] p-6 backdrop-blur-md">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="text-center md:text-left">
                 <h3 class="text-[#40E0D0] font-marker text-xl mb-1">¿UNAS CRAZY COOKIES?</h3>
                 <p class="text-gray-300 text-xs md:text-sm leading-relaxed">
-                    Usamos cookies para mejorar tu experiencia. Al aceptar, nos ayudas a optimizar la web. Si rechazas, solo usaremos las técnicas necesarias.
+                    Usamos solo cookies técnicas esenciales para que la web funcione correctamente. Al aceptar, confirmas que has sido informado. Si rechazas, algunas funciones básicas podrían no estar disponibles.
                 </p>
             </div>
             <div class="flex gap-3 shrink-0">
